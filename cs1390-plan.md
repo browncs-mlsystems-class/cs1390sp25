@@ -47,6 +47,24 @@ Course logistics are also available on this [calendar](https://calendar.google.c
 
 # Description {#description}
 
+Many applications, across industries varying from ecommerce to education, rely
+on data processing and machine learning systems for data analytics tasks. Deep
+learning techniques are now being applied to problems such as search, coding
+assistants, and chip placement. Due to how widely used these applications are,
+performance, specifically latency, throughput, and hardware efficiency, is very
+important. However, achieving high performance in these systems can be
+challenging. 
+
+This class will explore systems-related challenges related to building,
+training, deploying and managing large-scale data processing and machine
+learning systems. The learning goals of the class are for students to deeply
+understand the systems techniques that allow ML systems to be deployed
+efficiently, at scale.
+Topics include efficient training and inference, understanding how to build
+hardware ML algorithms, understanding ML algorithm performance, GPU
+programming and cuda, recent transformer architectures, efficient retrieval,
+and more.
+
 This is the first offering of this class; students should anticipate technical
 difficulties, and the course components and schedule are subject  to change.
 
@@ -76,34 +94,34 @@ or support in office hours.
 
 # Components and Grading {#coursestructure}
 
-## Course Projects: 60 % 
+## Course Projects: 65 % 
 
 The largest component of this class is a series of four course projects. Each
 project will involve an implementation task and writeup that answers conceptual questions.
 Course staff will grade projects based on the correctness and performance of the
-implementation, and clarity and completeness of the writeup.
+implementation, and clarity of the writeup.
 Projects may either be graded offline by course staff, or through live meetings
-with course staffs.
+with course staff.
 During these gradings meetings, students should be able to answer
 technical questions about the project.
 Projects in this course offering are in both Python (using Pytorch) and Cuda (to
 program GPUs). The breakdown of how much each project contributes to the final
 grade is below (percentages add to 60).
 
-- Project 0: 17.5 %
-- Project 1: 17.5 %
-- Project 2: 15 %
-- Project 3: 10 % 
+- Project 0: 18 %
+- Project 1: 18 %
+- Project 2: 18 %
+- Project 3: 11 % 
 
 ## Written Homeworks: 20 %
 
-There will be two written homeworks, where students read a piece of technical
+There will be two written homeworks, where students read pieces of technical
 writing (either a research paper or a tech report), and students must respond to
 conceptual questions. Responses will be graded on clarity. Late hours cannot be
 used on the written homeworks.
 
 
-## Post Lecture Quizzes: 15 %
+## Post Lecture Quizzes: 10 %
 
 After almost all the lectures, the teaching staff will post a short quiz that reinforces
 lecture content, which will be graded on completeness and correctness. If you have attended the lecture (or watched the lecture video
@@ -157,7 +175,7 @@ a total of 180 hours over the entire week.
 ```
 
 # Collaboration Policy {#collaboration}
-tudents should understand and follow the [Brown Academic
+Students should understand and follow the [Brown Academic
 Code](https://college.brown.edu/design-your-education/academic-policies/academic-code) and the [Code
 of Student Conduct](https://www.brown.edu/offices/student-conduct/code).
 
@@ -199,6 +217,8 @@ assignments publicly.
 
 Note that all dates are tentative and we may change the schedule as the course
 goes on.
+Homeworks and projects will be released latest by 5 PM on the release date, and will
+be due at *6 PM on the due date*.
 
 ---
 include-after: |
@@ -217,14 +237,14 @@ include-after: |
     }
   </style>
 ---
-Date         | Assignment                   | Link              | Due Date     |
-|------------|------------------------------|-------------------|--------------|
-| 01/24/2025 | Project 1: Parallelism       | [Project 1](#)    | 02/12/2025 (with mid-project checkin due on 02/04/2025)    | 
+Date         | Assignment                   | Link              | Due Date        |
+|------------|------------------------------|-------------------|-----------------|
+| 01/24/2025 | Project 1: Parallelism       | [Project 1](#)    | 02/13/2025 (with mid-project checkin due on 02/04/2025)    | 
 | 02/13/2025 | Project 2: Attention & KV Caching | [Project 2](#) | 03/06/2025 |
 | 03/06/2025 | Written HW 1 | [HW 1](#)     | 03/13/2025          |
-| 03/14/2025 | Project 3: Cuda Kernels      | [Project 3](#) | 04/08/2025           |
-| 04/08/2025 | Written HW 2 | [HW 2](#)     | 04/15/2025 |
-| 04/15/2025 | Project 4: Vector Databases | [Project 4](#) | 04/24/2025       |
+| 03/13/2025 | Project 3: Cuda Kernels      | [Project 3](#) | 04/10/2025           |
+| 04/10/2025 | Project 4: Vector Databases | [Project 4](#) | 04/22/2025       |
+| 04/22/2025 | Written HW 2 | [HW 2](#)     | 05/01/2025 |
 
 ## Lectures (PLQs Posted Here)
 
@@ -249,5 +269,18 @@ include-after: |
 Date         | Topic                        | Notes      | PLQ Link     |
 |------------|------------------------------|------------|--------------|
 | 01/23/2025 | Introduction to the Course   | [Notes](#) | [PLQ](#)     | 
-| 01/28/2025 | Basics of AI Systems         | [Notes](#) | [PLQ](#)     |
+| 01/28/2025 | Introduction to Deep Learning Systems        | [Notes](#) | [PLQ](#)     |
 
+
+```{=html}
+<hr style="border: none; border-top: 1px solid lightgrey; margin: 20px 0;">
+```
+
+### Credits
+Website designed using pandoc. The class content borrows heavily from [cs229s](https://cs229s.stanford.edu/fall2024/) at Stanford University, created by Azalia Mirhoseini and Simran Arora.
+We have also drawn on work from Simon Boehm, Deepak Narayanan, Zhijao Jia, and cs149 at
+Stanford. 
+We thank Brown t-staff for managing the hydra cluster, without which it would
+be difficult to complete projects 2 and 3.
+The collaboration policy is taken from cs1675 at Brown.
+The late hours policy is taken from Brown's cs300.
