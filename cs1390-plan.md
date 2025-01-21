@@ -278,7 +278,7 @@ Date         | Topic                        | Notes      | PLQ Link     |
 
 ### Credits
 Website designed using pandoc. The class content borrows heavily from [cs229s](https://cs229s.stanford.edu/fall2024/) at Stanford University, created by Azalia Mirhoseini and Simran Arora.
-We have also drawn on work from Simon Boehm, Deepak Narayanan, Zhijao Jia, and cs149 at
+We have also drawn on work from Simon Boehm, Deepak Narayanan, Zhihao Jia, and cs149 at
 Stanford. 
 We thank Brown t-staff for managing the hydra cluster, without which it would
 be difficult to complete projects 2 and 3.
