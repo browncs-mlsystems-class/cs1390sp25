@@ -106,7 +106,7 @@ During these gradings meetings, students should be able to answer
 technical questions about the project.
 Projects in this course offering are in both Python (using Pytorch) and Cuda (to
 program GPUs). The breakdown of how much each project contributes to the final
-grade is below (percentages add to 60).
+grade is below (percentages add to 65).
 
 - Project 0: 18 %
 - Project 1: 18 %
