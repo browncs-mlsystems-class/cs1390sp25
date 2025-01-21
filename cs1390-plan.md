@@ -23,7 +23,7 @@ Class Meetings: Tuesdays, Thursdays 09:00 - 10:20, CIT 368
 
 [Canvas](https://canvas.brown.edu/courses/1098542)
 
-[EdStem](#)
+[EdStem](https://edstem.org/us/courses/74760/discussion)
 
 ```{=html}
 <hr style="border: none; border-top: 1px solid lightgrey; margin: 20px 0;">
