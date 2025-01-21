@@ -1,1 +1,2 @@
-# cs1390sp25
+# brown-csci2690
+Class Website for CSCI 2690

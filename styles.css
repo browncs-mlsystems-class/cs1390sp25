@@ -1,0 +1,84 @@
+body {
+    background-color: #f4f4f4;
+    color: #002b36;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+/* Container for the status bar */
+#status-bar {
+    position: fixed; /* Keeps it at the top of the page */
+    top: 0; /* Aligns it to the top */
+    left: 0; /* Aligns it to the left edge */
+    width: 100%; /* Spans the full width of the page */
+      background-color: #069494;
+    color: white; /* White text */
+    display: flex; /* Aligns items horizontally */
+    justify-content: center; /* Centers the links */
+    padding: 10px 0; /* Adds some vertical padding */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Adds a shadow for separation */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+/* Links in the status bar */
+#status-bar a {
+    color: white; /* White link text */
+    text-decoration: none; /* Removes underline */
+    margin: 0 15px; /* Adds spacing between links */
+    font-weight: bold; /* Makes the links bold */
+}
+
+/* Underline effect on hover */
+#status-bar a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+.container {
+    width: 80%; /* Take up 80% of the viewport width */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Body padding to create space between status bar and content */
+body {
+        padding-top: 15px; /* Adds space equivalent to the height of the status bar */
+    }
+
+    /* Optional: Adjust title margin for specific headers */
+    h1 {
+            margin-top: 60px; /* Ensures the title starts below the status bar */
+        }
+
+/* Title on the left */
+#status-bar-title {
+    margin: 4; /* Remove default margin */
+    font-weight: bold; /* Make the title bold */
+    flex-grow: 1; /* Make the title section grow, taking available space */
+}
+/* Links container (right side) */
+#status-bar-links {
+    display: flex; /* Arrange the links horizontally */
+    justify-content: center; /* Center the links horizontally */
+}
+
+/* Links in the status bar */
+#status-bar-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+
+a:link {
+    color: #2aa198;
+}
+a:visited {
+    color: #d33682;
+}
+img {
+    width: 25%;
+}
+
