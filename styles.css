@@ -8,6 +8,30 @@ body {
     line-height: 1.2;
 }
 
+/* General container for each staff profile */
+.staff-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add spacing between profiles */
+}
+
+/* Style the photo */
+.staff-profile .photo img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%; /* Makes the photo circular */
+    margin-right: 20px; /* Spacing between photo and details */
+    object-fit: cover; /* Ensures the image fills the circle */
+    border: 2px solid #ccc; /* Optional border */
+}
+
+/* Details section */
+.staff-profile .details {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
 /* Container for the status bar */
 #status-bar {
     position: fixed; /* Keeps it at the top of the page */
