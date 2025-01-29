@@ -146,7 +146,8 @@ tradeoffs.</span></li>
 CPUs and 4 GB memory, with the current directory as the mount directory.</span></p>
 
       <div class="code-block-wrapper"><div class="code-toolbar"><button class="rounded text-normal font-normal leading-normal flex bg-transparent text-text-default border border-solid border-transparent hocus:bg-element-bg-hover hocus:text-text-emphasize hover:border-element-bg-hover focus:shadow-[0_0_0_2px_#77777733] focus:border-element-border-hover disabled:bg-transparent disabled:hocus:bg-transparent disabled:hocus:border-transparent disabled:text-element-text-disabled disabled:hocus:text-element-text-disabled ui-code-block-copy-button p-[7px]" data-state="closed"><i class="inline-flex ph ph-clipboard-text" aria-hidden="true" style="width: 20px; height: 20px; font-size: 20px; line-height: 20px;"></i></button></div>
-        <pre><code class="sh hljs">​​​​./run_docker download -s [mount_dir] -c [cpu_number] -m [memory_size]
+        <pre><code class="sh hljs">​​​​./run_docker run -s
+        [mount_dir] -c [cpu_number] -m [memory_size]
 </code></pre>
       </div>
       
@@ -377,19 +378,26 @@ captures the time it takes for the gradient synchronization.</span></p>
 </div><h3 id="Deliverables-for-Mid-Project-Checkpoint-Due-on-204" data-id="Deliverables-for-Mid-Project-Checkpoint-Due-on-204"><a class="anchor hidden-xs" href="#Deliverables-for-Mid-Project-Checkpoint-Due-on-204" title="Deliverables-for-Mid-Project-Checkpoint-Due-on-204"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Deliverables for Mid-Project Checkpoint Due on 2/04</span></h3><p><span>For
  the mid-project check-in, we want you to have implemented DDP and have 
 the correctness tests running (task 1.1). The test does not need to be 
-successful, but you should have an attempt at the code.</span></p><h2 id="Part-2-Model-Parallelism" data-id="Part-2-Model-Parallelism"><a class="anchor hidden-xs" href="#Part-2-Model-Parallelism" title="Part-2-Model-Parallelism"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Part 2: Model Parallelism</span></h2><p><span>Model
+successful, but you should have an attempt at the code.</span></p><h2
+id="Part-2-Model-Parallelism" data-id="Part-2-Model-Parallelism"><a
+class="anchor hidden-xs" href="#Part-2-Model-Parallelism"
+title="Part-2-Model-Parallelism"><span class="octicon octicon-link ph
+ph-link-simple-horizontal"></span></a><span>Part 2: Model
+Parallelism</span></h2><p><span>One form of model
  parallelism works by splitting the model into layers, and putting 
 partitions of contiguous layers on each device. The forward pass goes 
 through the partitions in order, while the backward pass propagates 
 gradients in reverse order. Model parallelism reduces communication 
 overhead compared to DDP because communication only happens at partition
- boundaries. However, default model parallelism has very low worker 
+ boundaries. However, this form of model parallelism has very low worker 
 utilization because only one worker is running at a time. We will 
 explore a way to improve this in the next part of the assignment.</span></p><p><span>For
  now, in this part of the assignment, you will create a model parallel 
 wrapper class inside pytorch for model parallel training of the VGG16 
 model on CPUs, and inspect its throughput, as well as a timeline of when
- computation occurs on each worker.</span></p><h3 id="Code-Structure-for-Model-Parallelisn" data-id="Code-Structure-for-Model-Parallelisn"><a class="anchor hidden-xs" href="#Code-Structure-for-Model-Parallelisn" title="Code-Structure-for-Model-Parallelisn"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Code Structure for Model Parallelisn</span></h3><p><span>The
+ computation occurs on each worker. Note that there are different types of model
+ parallelism, such as tensor model parallelism, which we will discuss in class,
+ but you are not implementing here.</span></p><h3 id="Code-Structure-for-Model-Parallelisn" data-id="Code-Structure-for-Model-Parallelisn"><a class="anchor hidden-xs" href="#Code-Structure-for-Model-Parallelisn" title="Code-Structure-for-Model-Parallelisn"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Code Structure for Model Parallelisn</span></h3><p><span>The
  code for model parallelism is structured slightly differently than the 
 data parallel wrapper. We recommend taking a look at it before starting 
 to understand the differences (in </span><code>/model_parallel.py</code><span>):</span></p><ol style="padding-left: 2em;">
@@ -687,10 +695,17 @@ with model parallelism and why?</span><br>
 <span>In the </span><a href="https://arxiv.org/pdf/1811.06965" target="_blank" rel="noopener"><span>GPipe</span></a><span> paper, </span><strong><span>section 2.3 Performance Optimization</span></strong><span>, the author proposed that the size of the pipeline bubble (the fraction of times when workers are not being utilized) is:</span><br>
 <span class="mathjax code-block-wrapper" data-raw-code="T1xsZWZ0KFxmcmFje0stMX17TStLLTF9XHJpZ2h0KQ" style="display: block;"></span></p><div class="code-toolbar"><button class="rounded text-normal font-normal leading-normal flex bg-transparent text-text-default border border-solid border-transparent hocus:bg-element-bg-hover hocus:text-text-emphasize hover:border-element-bg-hover focus:shadow-[0_0_0_2px_#77777733] focus:border-element-border-hover disabled:bg-transparent disabled:hocus:bg-transparent disabled:hocus:border-transparent disabled:text-element-text-disabled disabled:hocus:text-element-text-disabled ui-code-block-copy-button p-[7px]" data-state="closed"><i class="inline-flex ph ph-clipboard-text" aria-hidden="true" style="width: 20px; height: 20px; font-size: 20px; line-height: 20px;"></i></button></div><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" display="true" tabindex="0" ctxtmenu_counter="0"><mjx-math display="true" style="margin-left: 0px; margin-right: 0px;" class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mrow space="2"><mjx-mo class="mjx-s3"><mjx-c class="mjx-c28 TEX-S3"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-s3"><mjx-c class="mjx-c29 TEX-S3"></mjx-c></mjx-mo></mjx-mrow></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>O</mi><mrow data-mjx-texclass="INNER"><mo data-mjx-texclass="OPEN">(</mo><mfrac><mrow><mi>K</mi><mo>−</mo><mn>1</mn></mrow><mrow><mi>M</mi><mo>+</mo><mi>K</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo data-mjx-texclass="CLOSE">)</mo></mrow></math></mjx-assistive-mml></mjx-container><br>
 <span>Please derive this expression based on Figure 2a in the paper.</span><p></p>
-</div><p><span>Even though the approach in </span><a href="https://arxiv.org/pdf/1811.06965" target="_blank" rel="noopener"><span>GPipe</span></a><span> improves utilization over model parallelism, we can still observe idle gaps where workers are not being used. In the paper </span><a href="https://people.eecs.berkeley.edu/~matei/papers/2019/sosp_pipedream.pdf" target="_blank" rel="noopener"><span>PipeDream</span></a><span>, the authors proposed a different approach (with schedules called </span><strong><span>1F1B</span></strong><span> and </span><strong><span>1F2B</span></strong><span>).</span></p><div class="alert alert-info">
+</div><p><span>Even though the approach in </span><a
+    href="https://arxiv.org/pdf/1811.06965" target="_blank"
+    rel="noopener"><span>GPipe</span></a><span> improves utilization over model
+    parallelism, we can still observe idle gaps where workers are not being
+    used. In the paper </span><a
+    href="https://people.eecs.berkeley.edu/~matei/papers/2019/sosp_pipedream.pdf"
+    target="_blank" rel="noopener"><span>PipeDream</span></a><span>, the authors
+    proposed a different approach (with a schedule called </span><strong><span>1F1B</span></strong><span>).</span></p><div class="alert alert-info">
 <p><strong><span>Question 4.4</span></strong><br>
-<span>Referring to Figure 4, please briefly explain how </span><strong><span>1F2B</span></strong><span>
- reduces bubble size compare to mircobatch pipeline. To achieve this 
+<span>Referring to Figure 4, please briefly explain how </span><strong><span>1F1B</span></strong><span>
+ reduces bubble size compared to the Gpipe version. To achieve this 
 schedule, however, does Pipedream have to store any extra data in memory
  Gpipe would not have to otherwise?</span></p>
 </div><h2 id="Further-References" data-id="Further-References"><a class="anchor hidden-xs" href="#Further-References" title="Further-References"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Further References</span></h2><p><span>We
