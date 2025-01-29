@@ -163,7 +163,7 @@ CPUs and 4 GB memory, with the current directory as the mount directory.</span><
 <span></span>
 <span></span></div><div class="code">​​​​docker pull cs1390mlsys/cs1390
 ​​​​docker tag cs1390mlsys/cs1390 cs1390
-​​​​docker run -it --mount <span class="hljs-built_in">type</span>=<span class="hljs-built_in">bind</span>,<span class="hljs-built_in">source</span>=[source_dir],target=/home/cs1390-user cs1390 /bin/bash
+​​​docker run -it --shm-size=1g --cpus=[cpu_num] -m=[memory] --mount type=bind,source=./,target=/home/cs1390-user cs1390 /bin/bash
 </div></div></code></pre>
       </div>
       
@@ -174,7 +174,7 @@ CPUs and 4 GB memory, with the current directory as the mount directory.</span><
 <span></span>
 <span></span></div><div class="code">​​​​docker pull cs1390mlsys/cs1390.arm
 ​​​​docker tag cs1390mlsys/cs1390.arm cs1390.arm
-​​​​docker run -it --mount <span class="hljs-built_in">type</span>=<span class="hljs-built_in">bind</span>,<span class="hljs-built_in">source</span>=[source_dir],target=/home/cs1390-user cs1390.arm /bin/bash
+​​​docker run -it --shm-size=1g --cpus=[cpu_num] -m=[memory] --mount type=bind,source=./,target=/home/cs1390-user cs1390.arm /bin/bash
 </div></div></code></pre>
       </div>
       
