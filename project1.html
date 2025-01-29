@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
-<head>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,12 +13,12 @@
     <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
     <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="project1_files/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
+    <link rel="stylesheet" href="project1_files/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <link rel="stylesheet" href="project1_files/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous">
+    <link rel="stylesheet" href="project1_files/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous">
+    <link rel="stylesheet" href="project1_files/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous">
+    <link rel="stylesheet" href="project1_files/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous">
     <style>
         @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);
 /*!
@@ -54,42 +52,80 @@
 </head>
 
 <body>
-    <div id="doc" class="markdown-body container-fluid comment-enabled comment-inner" data-hard-breaks="true"><p><strong><a href="http://cs.brown.edu/courses/csci1390/" target="_blank" rel="noopener"><span>« Back to the CS1390 website</span></a></strong></p><h1 id="Assignment-1-Parallelism-Techniques-" data-id="Assignment-1-Parallelism-Techniques-"><a class="anchor hidden-xs" href="#Assignment-1-Parallelism-Techniques-" title="Assignment-1-Parallelism-Techniques-"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Assignment 1: Parallelism Techniques </span><img class="emoji offline-handled error-handled" alt=":computer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/computer.png"><span> </span><img class="emoji offline-handled error-handled" alt=":link:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/link.png"><span> </span><img class="emoji offline-handled error-handled" alt=":computer:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/computer.png"></h1><h4 id="Parts-1-2-correctness-only-due-Tuesday-February-4th-at-600pm-EST" data-id="Parts-1-2-correctness-only-due-Tuesday-February-4th-at-600pm-EST"><a class="anchor hidden-xs" href="#Parts-1-2-correctness-only-due-Tuesday-February-4th-at-600pm-EST" title="Parts-1-2-correctness-only-due-Tuesday-February-4th-at-600pm-EST"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><mark><strong><span>Parts 1-2 (correctness only) due Tuesday, February 4th at 6:00pm EST</span></strong></mark></h4><h4 id="All-parts-due-Wednesday-February-19th-at-600pm-EST" data-id="All-parts-due-Wednesday-February-19th-at-600pm-EST"><a class="anchor hidden-xs" href="#All-parts-due-Wednesday-February-19th-at-600pm-EST" title="All-parts-due-Wednesday-February-19th-at-600pm-EST"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><mark><strong><span>All parts due Wednesday, February 19th at 6:00pm EST</span></strong></mark></h4><h1 id="Introduction" data-id="Introduction"><a class="anchor hidden-xs" href="#Introduction" title="Introduction"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Introduction</span></h1><p><span>With increasingly larger models and training data becoming the norm, it has become challenging to train machine learning models efficiently due to constraints in computational resources and memory. These challenges have led to the development of various parallelism strategies to distribute computation and memory usage across multiple devices or nodes.</span></p><p><span>In this assignment, you will explore two common parallelism techniques in training machine learning models: data parallelism and model parallelism. After this, you will explore fully sharded data parallelism and pipeline parallelism, which address some of the limitations with data and model parallelism.</span></p><h3 id="Due-dates" data-id="Due-dates"><a class="anchor hidden-xs" href="#Due-dates" title="Due-dates"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Due dates:</span></h3><ul>
+    <div id="doc" class="markdown-body container-fluid comment-enabled comment-inner" data-hard-breaks="true"><p><strong><a href="http://cs.brown.edu/courses/csci1390/" target="_blank" rel="noopener"><span>« Back to the CS1390 website</span></a></strong></p><h1 id="Assignment-1-Parallelism-Techniques-" data-id="Assignment-1-Parallelism-Techniques-"><a class="anchor hidden-xs" href="#Assignment-1-Parallelism-Techniques-" title="Assignment-1-Parallelism-Techniques-"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Assignment 1: Parallelism Techniques </span><img class="emoji offline-handled error-handled" alt=":computer:" src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/computer.png"><span> </span><img class="emoji offline-handled error-handled" alt=":link:" src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/link.png"><span> </span><img class="emoji offline-handled error-handled" alt=":computer:" src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/computer.png"></h1><h4 id="Parts-1-2-correctness-only-due-Tuesday-February-4th-at-600pm-EST" data-id="Parts-1-2-correctness-only-due-Tuesday-February-4th-at-600pm-EST"><a class="anchor hidden-xs" href="#Parts-1-2-correctness-only-due-Tuesday-February-4th-at-600pm-EST" title="Parts-1-2-correctness-only-due-Tuesday-February-4th-at-600pm-EST"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><mark><strong><span>Parts 1-2 (correctness only) due Tuesday, February 4th at 6:00pm EST</span></strong></mark></h4><h4 id="All-parts-due-Wednesday-February-19th-at-600pm-EST" data-id="All-parts-due-Wednesday-February-19th-at-600pm-EST"><a class="anchor hidden-xs" href="#All-parts-due-Wednesday-February-19th-at-600pm-EST" title="All-parts-due-Wednesday-February-19th-at-600pm-EST"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><mark><strong><span>All parts due Wednesday, February 19th at 6:00pm EST</span></strong></mark></h4><h1 id="Introduction" data-id="Introduction"><a class="anchor hidden-xs" href="#Introduction" title="Introduction"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Introduction</span></h1><p><span>With
+ increasingly larger models and training data becoming the norm, it has 
+become challenging to train machine learning models efficiently due to 
+constraints in computational resources and memory. These challenges have
+ led to the development of various parallelism strategies to distribute 
+computation and memory usage across multiple devices or nodes.</span></p><p><span>In
+ this assignment, you will explore two common parallelism techniques in 
+training machine learning models: data parallelism and model 
+parallelism. After this, you will explore fully sharded data parallelism
+ and pipeline parallelism, which address some of the limitations with 
+data and model parallelism.</span></p><h3 id="Due-dates" data-id="Due-dates"><a class="anchor hidden-xs" href="#Due-dates" title="Due-dates"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Due dates:</span></h3><ul>
 <li><span>This assignment has </span><em><span>two due dates</span></em><span>, one as an initial check in (deliverables described below), and one where the final assignment will be submitted. </span><em><span>You cannot use late hours on the initial check in.</span></em>
 <ul>
 <li><strong><span>Initial check in due on 2/04/2025 at 6 PM</span></strong></li>
 <li><strong><span>Final assignment due on 2/19/2025 at 6 PM</span></strong></li>
 </ul>
 </li>
-<li><span>The official late policy is described on the </span><a href="https://cs.brown.edu/courses/csci1390/#coursestructure" target="_blank" rel="noopener"><span>website</span></a><span>, in terms of the total number of late hours and how they are split across assignments. The grading server takes care of accounting for these across assignments and showing you how many are leftover!</span></li>
+<li><span>The official late policy is described on the </span><a href="https://cs.brown.edu/courses/csci1390/#coursestructure" target="_blank" rel="noopener"><span>website</span></a><span>,
+ in terms of the total number of late hours and how they are split 
+across assignments. The grading server takes care of accounting for 
+these across assignments and showing you how many are leftover!</span></li>
 </ul><h3 id="Deliverables-for-Initial-Check-In" data-id="Deliverables-for-Initial-Check-In"><a class="anchor hidden-xs" href="#Deliverables-for-Initial-Check-In" title="Deliverables-for-Initial-Check-In"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Deliverables for Initial Check-In:</span></h3><ul>
-<li><span>For the initial check-in, you will need to submit your code to the grading server with the implementation tasks in Part 1 (DDP) and Part 2 (model parallel) completed.</span></li>
+<li><span>For the initial check-in, you will need to submit your code to
+ the grading server with the implementation tasks in Part 1 (DDP) and 
+Part 2 (model parallel) completed.</span></li>
 <li><span>We will run the </span><strong><span>correctness tests</span></strong><span> for the DDP and Model Parallel; your implementation should be working correctly by the time the check-in is due</span>
 <ul>
-<li><span>It is </span><em><span>ok</span></em><span> if the code does not pass the correctness tests; we are mostly looking to see that you have made an effort to complete both parts. We recommend at least getting through these correctness tests, so you have time for the rest of the assignment!</span></li>
+<li><span>It is </span><em><span>ok</span></em><span> if the code does 
+not pass the correctness tests; we are mostly looking to see that you 
+have made an effort to complete both parts. We recommend at least 
+getting through these correctness tests, so you have time for the rest 
+of the assignment!</span></li>
 </ul>
 </li>
 <li><span>You </span><em><span>do not need to finish</span></em><span> the performance analysis sections or conceptual question sections within Parts 1 and 2 for the initial check-in</span></li>
 </ul><h3 id="Deliverables-for-Final-Assignment" data-id="Deliverables-for-Final-Assignment"><a class="anchor hidden-xs" href="#Deliverables-for-Final-Assignment" title="Deliverables-for-Final-Assignment"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Deliverables for Final Assignment:</span></h3><ul>
-<li><span>For the final submission, you will need to submit your code for all parts of the assignment to the grading server, and the writeup containing your generated graphs, explanations of the generated graphs, and answers to the math/conceptual questions.</span>
+<li><span>For the final submission, you will need to submit your code 
+for all parts of the assignment to the grading server, and the writeup 
+containing your generated graphs, explanations of the generated graphs, 
+and answers to the math/conceptual questions.</span>
 <ul>
 <li><span>These questins are included in the </span><code>README.md</code><span> of the assignment repository; simply fill in your answers and graphs directly on the </span><code>README.md</code><span>.</span></li>
 </ul>
 </li>
-<li><span>We are still in the process of setting up the grading server; we will post instructions on registering with the grading server later this week.</span>
+<li><span>We are still in the process of setting up the grading server; 
+we will post instructions on registering with the grading server later 
+this week.</span>
 <ul>
-<li><span>We potentially hope to have a way for you to submit runs of any parts of the assignment below so you can generate the data to graph on the grading server; we will have more information on this later.</span></li>
+<li><span>We potentially hope to have a way for you to submit runs of 
+any parts of the assignment below so you can generate the data to graph 
+on the grading server; we will have more information on this later.</span></li>
 </ul>
 </li>
 </ul><h2 id="Learning-Goals" data-id="Learning-Goals"><a class="anchor hidden-xs" href="#Learning-Goals" title="Learning-Goals"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Learning Goals</span></h2><ul>
-<li><span>Learn about some of the different ways to parallelize training machine learning models, and understand their tradeoffs with respect to the following:</span>
+<li><span>Learn about some of the different ways to parallelize training
+ machine learning models, and understand their tradeoffs with respect to
+ the following:</span>
 <ul>
 <li><strong><span>Memory Overhead</span></strong><span>: does this parallelism method require replicating any model state, causing extra memory overhead as we scale to multiple nodes?</span></li>
-<li><strong><span>Communication Overhead</span></strong><span>: does this parallellism method require any communication between workers to synchronize any model state, which limits the scalability of the training method?</span></li>
+<li><strong><span>Communication Overhead</span></strong><span>: does 
+this parallellism method require any communication between workers to 
+synchronize any model state, which limits the scalability of the 
+training method?</span></li>
 </ul>
 </li>
 <li><span>Get hands on experience implementing these methods in PyTorch and measuring the performance of your implementations.</span></li>
-<li><strong><span>A note about resources</span></strong><span>: The assignment will use </span><em><span>CPUs</span></em><span> to demonstrate parallel training. Because of this, the observed speedups may not actually match what one would see on a GPU. However, we have designed the questions and explorations in the assignment for you to understand what the </span><em><span>method should be doing</span></em><span>, so later, if you are ever in a situation where you use one of these methods for parallel training, you have a better understanding of its tradeoffs.</span></li>
+<li><strong><span>A note about resources</span></strong><span>: The assignment will use </span><em><span>CPUs</span></em><span>
+ to demonstrate parallel training. Because of this, the observed 
+speedups may not actually match what one would see on a GPU. However, we
+ have designed the questions and explorations in the assignment for you 
+to understand what the </span><em><span>method should be doing</span></em><span>,
+ so later, if you are ever in a situation where you use one of these 
+methods for parallel training, you have a better understanding of its 
+tradeoffs.</span></li>
 </ul><h2 id="Assignment-Installation" data-id="Assignment-Installation"><a class="anchor hidden-xs" href="#Assignment-Installation" title="Assignment-Installation"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Assignment Installation</span></h2><p><span>The Github classroom link with the starter code can be found </span><a href="https://classroom.github.com/a/jPLIUX4J" target="_blank" rel="noopener"><span>here</span></a><span>.</span></p><h3 id="Using-Containers-for-Development" data-id="Using-Containers-for-Development"><a class="anchor hidden-xs" href="#Using-Containers-for-Development" title="Using-Containers-for-Development"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Using Containers for Development</span></h3><p><span>Make sure you have a container management tool installed locally (e.g., Docker or Podman). Then, use the </span><code>./run_docker</code><span> scripts  to pull and run containers as needed. (You may need to use </span><code>sudo</code><span> or </span><code>dos2unix</code><span> if you see any related error.)</span></p><ul>
 <li>
 <p><strong><span>For downloading the container:</span></strong></p>
@@ -105,7 +141,9 @@
 </li>
 <li>
 <p><strong><span>For running the container:</span></strong><br>
-<span>You need to specify the mount directory to use the current working directory within the container. </span><strong><span>Note that</span></strong><span> If you do not specify any parameter, it will run the container with 4 CPUs and 4 GB memory, with the current directory as the mount directory.</span></p>
+<span>You need to specify the mount directory to use the current working directory within the container. </span><strong><span>Note that</span></strong><span>
+ If you do not specify any parameter, it will run the container with 4 
+CPUs and 4 GB memory, with the current directory as the mount directory.</span></p>
 
       <div class="code-block-wrapper"><div class="code-toolbar"><button class="rounded text-normal font-normal leading-normal flex bg-transparent text-text-default border border-solid border-transparent hocus:bg-element-bg-hover hocus:text-text-emphasize hover:border-element-bg-hover focus:shadow-[0_0_0_2px_#77777733] focus:border-element-border-hover disabled:bg-transparent disabled:hocus:bg-transparent disabled:hocus:border-transparent disabled:text-element-text-disabled disabled:hocus:text-element-text-disabled ui-code-block-copy-button p-[7px]" data-state="closed"><i class="inline-flex ph ph-clipboard-text" aria-hidden="true" style="width: 20px; height: 20px; font-size: 20px; line-height: 20px;"></i></button></div>
         <pre><code class="sh hljs">​​​​./run_docker download -s [mount_dir] -c [cpu_number] -m [memory_size]
@@ -150,7 +188,9 @@
 <p><span>Install miniconda with the instructions </span><a href="https://docs.anaconda.com/miniconda/install/" target="_blank" rel="noopener"><span>here</span></a><span>. Take note of the location where miniconda is installed, which we will call $PATH_TO_MINICONDA.</span></p>
 </li>
 <li data-startline-back="85" data-endline-back="86">
-<p><span>Shell initialization: we recommend adding the conda initialization to your shell configuration (which may have been done during the install). To do this:</span></p>
+<p><span>Shell initialization: we recommend adding the conda 
+initialization to your shell configuration (which may have been done 
+during the install). To do this:</span></p>
 </li>
 </ol>
 
@@ -191,10 +231,19 @@ pip install -r requirements.txt
       </div>
       
 </details>
-</div><h2 id="Part-1-Distributed-Data-Parallel" data-id="Part-1-Distributed-Data-Parallel"><a class="anchor hidden-xs" href="#Part-1-Distributed-Data-Parallel" title="Part-1-Distributed-Data-Parallel"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Part 1: Distributed Data Parallel</span></h2><p><span>Distributed Data Parallel (DDP) works by replicating the model on each device, splitting the dataset into smaller shards, and training the model on each shard independently. After each training step, gradients are synchronized across all devices to ensure consistency.</span></p><p><span>In the first part of the assignment, you will create a model wrapper class inside pytorch for data parallel training of the VGG16 model on </span><strong><span>CPUs</span></strong><span>, and inspect its scalability.</span></p><h3 id="Implement-DDP" data-id="Implement-DDP"><a class="anchor hidden-xs" href="#Implement-DDP" title="Implement-DDP"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Implement DDP</span></h3><p><span>To get started, you will complete the blank sections in the </span><code>ddp.py</code><span> file. If you're unsure about what a specific function does, take a closer look at the </span><code>train_vgg16_cifar10_ddp</code><span> and </span><code>train_vgg16_cifar10_ddp_worker</code><span> functions for hints. It will always be helpful to review the lecture notes as well!</span></p><div class="alert alert-success">
+</div><h2 id="Part-1-Distributed-Data-Parallel" data-id="Part-1-Distributed-Data-Parallel"><a class="anchor hidden-xs" href="#Part-1-Distributed-Data-Parallel" title="Part-1-Distributed-Data-Parallel"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Part 1: Distributed Data Parallel</span></h2><p><span>Distributed
+ Data Parallel (DDP) works by replicating the model on each device, 
+splitting the dataset into smaller shards, and training the model on 
+each shard independently. After each training step, gradients are 
+synchronized across all devices to ensure consistency.</span></p><p><span>In
+ the first part of the assignment, you will create a model wrapper class
+ inside pytorch for data parallel training of the VGG16 model on </span><strong><span>CPUs</span></strong><span>, and inspect its scalability.</span></p><h3 id="Implement-DDP" data-id="Implement-DDP"><a class="anchor hidden-xs" href="#Implement-DDP" title="Implement-DDP"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Implement DDP</span></h3><p><span>To get started, you will complete the blank sections in the </span><code>ddp.py</code><span> file. If you're unsure about what a specific function does, take a closer look at the </span><code>train_vgg16_cifar10_ddp</code><span> and </span><code>train_vgg16_cifar10_ddp_worker</code><span> functions for hints. It will always be helpful to review the lecture notes as well!</span></p><div class="alert alert-success">
 <p><strong><span>Task 1.1</span></strong></p>
 <ol style="padding-left: 2em;">
-<li><span>Implement the </span><code>DistributedDataParallel</code><span> class. This class serves as a wrapper for the model, enabling distributed training across multiple devices. This includes completing the methods </span><code>broadcast_params</code><span> and </span><code>average_gradients</code><span>.</span></li>
+<li><span>Implement the </span><code>DistributedDataParallel</code><span>
+ class. This class serves as a wrapper for the model, enabling 
+distributed training across multiple devices. This includes completing 
+the methods </span><code>broadcast_params</code><span> and </span><code>average_gradients</code><span>.</span></li>
 <li><span>Complete the training process in </span><code>train_vgg16_cifar10_ddp_worker</code><span>, in the training data loader loop. This includes:</span>
 <ul>
 <li><span>Inserting methods to call the parallel model wrapper on each iteration of the dataloader, calculating the loss.</span></li>
@@ -211,9 +260,27 @@ pip install -r requirements.txt
 </div><h3 id="Check-Correctness" data-id="Check-Correctness"><a class="anchor hidden-xs" href="#Check-Correctness" title="Check-Correctness"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Check Correctness</span></h3><p><span>After you've done with </span><strong><span>Task 1.1</span></strong><span>, you can use the following command to check whether your implementation is correct:</span></p><div class="code-block-wrapper"><div class="code-toolbar"><button class="rounded text-normal font-normal leading-normal flex bg-transparent text-text-default border border-solid border-transparent hocus:bg-element-bg-hover hocus:text-text-emphasize hover:border-element-bg-hover focus:shadow-[0_0_0_2px_#77777733] focus:border-element-border-hover disabled:bg-transparent disabled:hocus:bg-transparent disabled:hocus:border-transparent disabled:text-element-text-disabled disabled:hocus:text-element-text-disabled ui-code-block-copy-button p-[7px]" data-state="closed"><i class="inline-flex ph ph-clipboard-text" aria-hidden="true" style="width: 20px; height: 20px; font-size: 20px; line-height: 20px;"></i></button></div>
         <pre><code class="sh hljs">python train.py --num_batches 2 --num_workers 2 --learning_rate 1e-3 --batch_size 32 --check_output ddp
 </code></pre>
-      </div><p><span>With our random seed ensuring deterministic model training, this correctness test will compare you trained model to a baseline PyTorch implementation. This allows you to verify your implementation against the expected results. The test will check the weights of the trained model, and the output of the trained model on a test batch.</span></p><h3 id="Performance-Analysis" data-id="Performance-Analysis"><a class="anchor hidden-xs" href="#Performance-Analysis" title="Performance-Analysis"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Performance Analysis</span></h3><p><span>Before analyzing the performance of your DDP model, please be cognizant that your machine may not support 4 workers (because of the memory overhead). If this is the case, feel free to use up to 3 (or 2) workers for the below measurements. We recommend shutting of memory intensive applications, such as Slack. By default, </span><code>train.py</code><span> uses 1 CPU per core; you can also scale this up with the </span><code>--cores_per_worker</code><span> argument if you have enough resources. We will also try to provide instructions for you to schedule runs on the grading server.</span></p><h4 id="Split-Time-of-Each-Worker" data-id="Split-Time-of-Each-Worker"><a class="anchor hidden-xs" href="#Split-Time-of-Each-Worker" title="Split-Time-of-Each-Worker"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Split Time of Each Worker</span></h4><p><span>In distributed training, each node spends time executing its own tasks, and each node spends time on communication. Understanding the time spent in each stage is crucial for evaluating the scalability of your implementation.</span></p><div class="alert alert-success">
+      </div><p><span>With our random seed ensuring deterministic model 
+training, this correctness test will compare you trained model to a 
+baseline PyTorch implementation. This allows you to verify your 
+implementation against the expected results. The test will check the 
+weights of the trained model, and the output of the trained model on a 
+test batch.</span></p><h3 id="Performance-Analysis" data-id="Performance-Analysis"><a class="anchor hidden-xs" href="#Performance-Analysis" title="Performance-Analysis"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Performance Analysis</span></h3><p><span>Before
+ analyzing the performance of your DDP model, please be cognizant that 
+your machine may not support 4 workers (because of the memory overhead).
+ If this is the case, feel free to use up to 3 (or 2) workers for the 
+below measurements. We recommend shutting of memory intensive 
+applications, such as Slack. By default, </span><code>train.py</code><span> uses 1 CPU per core; you can also scale this up with the </span><code>--cores_per_worker</code><span> argument if you have enough resources. We will also try to provide instructions for you to schedule runs on the grading server.</span></p><h4 id="Split-Time-of-Each-Worker" data-id="Split-Time-of-Each-Worker"><a class="anchor hidden-xs" href="#Split-Time-of-Each-Worker" title="Split-Time-of-Each-Worker"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Split Time of Each Worker</span></h4><p><span>In
+ distributed training, each node spends time executing its own tasks, 
+and each node spends time on communication. Understanding the time spent
+ in each stage is crucial for evaluating the scalability of your 
+implementation.</span></p><div class="alert alert-success">
 <p><strong><span>Task 1.2</span></strong><br>
-<span>Based on the statistics recorded within the training loop, we have provided a built-in function that generates a graph that breaks down the time spent on each stage (communication, computation, and optimizer updates) and shows how this breakdown changes as the number of workers increase.</span><br>
+<span>Based on the statistics recorded within the training loop, we have
+ provided a built-in function that generates a graph that breaks down 
+the time spent on each stage (communication, computation, and optimizer 
+updates) and shows how this breakdown changes as the number of workers 
+increase.</span><br>
 <span>You can use the following commands to generate the data for the graph and plot the graph:</span></p>
 
       <div class="code-block-wrapper"><div class="code-toolbar"><button class="rounded text-normal font-normal leading-normal flex bg-transparent text-text-default border border-solid border-transparent hocus:bg-element-bg-hover hocus:text-text-emphasize hover:border-element-bg-hover focus:shadow-[0_0_0_2px_#77777733] focus:border-element-border-hover disabled:bg-transparent disabled:hocus:bg-transparent disabled:hocus:border-transparent disabled:text-element-text-disabled disabled:hocus:text-element-text-disabled ui-code-block-copy-button p-[7px]" data-state="closed"><i class="inline-flex ph ph-clipboard-text" aria-hidden="true" style="width: 20px; height: 20px; font-size: 20px; line-height: 20px;"></i></button></div>
@@ -228,21 +295,30 @@ python3 --output graphs/ddp_split_time.png split_time ddp=1,ddp=2,ddp=4
       </div>
       
 <p><span>Note that the graph will be automatically saved into file </span><code>$REPO/graphs/ddp_split_time.png</code><span>.</span></p>
-<p><strong><span>Please include your generated graph here. If you are not able to finish this part of the assignment, we have provided a reference graph (generated on the grading server) for you to answer the question below.</span></strong></p>
+<p><strong><span>Please include your generated graph here. If you are 
+not able to finish this part of the assignment, we have provided a 
+reference graph (generated on the grading server) for you to answer the 
+question below.</span></strong></p>
 </div><div class="alert alert-info">
 <p><strong><span>Question 1.1</span></strong><br>
 <span>Please use your graph or the reference graph below to answer the following questions:</span></p>
 <ul>
-<li><span>What is the expected behavior for computation time, optimizer update time, and communication time as the number of workers increase?</span></li>
+<li><span>What is the expected behavior for computation time, optimizer 
+update time, and communication time as the number of workers increase?</span></li>
 <li><span>Does the generated graph match your expectations? If it looks different, try to analyze the reasons for the discrepancy.</span></li>
-<li><span>How might the relative difference of computation and communication change for a system containing GPUs connected by high-bandwidth interconnects?</span></li>
+<li><span>How might the relative difference of computation and 
+communication change for a system containing GPUs connected by 
+high-bandwidth interconnects?</span></li>
 </ul>
 <p><span>If you could not generate the graph locally, we have provided a reference from the grading server.</span></p>
 <div style="text-align: center;">
-<img src="https://hackmd.io/_uploads/Bk2AEU8dJe.png" style="zoom:65%" class="offline-handled error-handled">
+<img src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/upload_1e8cfd3a09207959192b8dfc441ef0f4.png" style="zoom:65%" class="offline-handled error-handled">
 </div>
 <details><summary><span><span>hint</span></span></summary>
-<p><em><span>The difference between your graph and the expected graph could be influenced by factors related to your OS, concurrently running applications, or resources. But feel free to comment on any factors you believe are reasonable.</span></em></p>
+<p><em><span>The difference between your graph and the expected graph 
+could be influenced by factors related to your OS, concurrently running 
+applications, or resources. But feel free to comment on any factors you 
+believe are reasonable.</span></em></p>
 </details>
 </div><h4 id="Throughput" data-id="Throughput"><a class="anchor hidden-xs" href="#Throughput" title="Throughput"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Throughput</span></h4><p><span>Throughput generally refers to the number of samples a model can process per second.</span></p><div class="alert alert-success">
 <p><strong><span>Task 1.3</span></strong><br>
@@ -262,40 +338,87 @@ python3 plot.py throughput ddp=1,ddp=2,ddp=4 --output graphs/ddp_throughput_comp
       
 <p><span>Note the generated graph is stored in </span><code>$REPO/graphs/ddp_throughput_comparison.png</code><span>.</span></p>
 <blockquote>
-<p><strong><span>Please include your generated graph here. If you are not able to finish this part of the assignment, we have provided a reference graph (generated on the grading server) for you to answer the question below</span></strong><span>.</span></p>
+<p><strong><span>Please include your generated graph here. If you are 
+not able to finish this part of the assignment, we have provided a 
+reference graph (generated on the grading server) for you to answer the 
+question below</span></strong><span>.</span></p>
 </blockquote>
 </div><div class="alert alert-info">
 <p><strong><span>Question 1.2</span></strong><br>
-<span>Please analyze the scalability of your implementation. Start by considering what the ideal case would look like (perfect scalability with no overheads); then think about how potential bottlenecks influece performance. Does your graph match your expectations? Why or why not?</span></p>
+<span>Please analyze the scalability of your implementation. Start by 
+considering what the ideal case would look like (perfect scalability 
+with no overheads); then think about how potential bottlenecks influece 
+performance. Does your graph match your expectations? Why or why not?</span></p>
 <p><span>If you were not able to generate the graph, we have provided a reference version from the grading server:</span></p>
 <div style="text-align: center;">
-<img src="https://hackmd.io/_uploads/HJUD9UIukg.png" style="zoom:70%" class="offline-handled error-handled">
+<img src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/upload_e60143591fb8ce5f7512d1930463629d.png" style="zoom:70%" class="offline-handled error-handled">
 </div>
-</div><h3 id="Math-time-Memory-Usage-and-Communication-in-DDP" data-id="Math-time-Memory-Usage-and-Communication-in-DDP"><a class="anchor hidden-xs" href="#Math-time-Memory-Usage-and-Communication-in-DDP" title="Math-time-Memory-Usage-and-Communication-in-DDP"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Math time: Memory Usage and Communication in DDP</span></h3><p><span>The main limitation of data parallelism is the high memory requirement; the model is replicated on each device.</span></p><p><span>Assume we have a model with P parameters. This means concretely that there are P model parameters, P gradients, and KP optimizer states (K represents how many variables the optimizer holds per parameter).</span></p><div class="alert alert-info">
+</div><h3 id="Math-time-Memory-Usage-and-Communication-in-DDP" data-id="Math-time-Memory-Usage-and-Communication-in-DDP"><a class="anchor hidden-xs" href="#Math-time-Memory-Usage-and-Communication-in-DDP" title="Math-time-Memory-Usage-and-Communication-in-DDP"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Math time: Memory Usage and Communication in DDP</span></h3><p><span>The main limitation of data parallelism is the high memory requirement; the model is replicated on each device.</span></p><p><span>Assume
+ we have a model with P parameters. This means concretely that there are
+ P model parameters, P gradients, and KP optimizer states (K represents 
+how many variables the optimizer holds per parameter).</span></p><div class="alert alert-info">
 <p><strong><span>Question 1.3</span></strong><br>
-<span>For the data given above, write the memory consumption (in terms of P and K) when there are W parallel workers. Assume that the all data is stored with the same precision (e.g., all fp32 or all fp16), so you do not need to account for the precision in your answer.</span></p>
+<span>For the data given above, write the memory consumption (in terms 
+of P and K) when there are W parallel workers. Assume that the all data 
+is stored with the same precision (e.g., all fp32 or all fp16), so you 
+do not need to account for the precision in your answer.</span></p>
 </div><div class="alert alert-info">
 <p><strong><span>Question 1.4</span></strong><br>
 <span>Now, consider a real-world scenario: We use SGD (which uses P parameters as state, just re-storing the parameters), with </span><strong><span>8</span></strong><span> workers, to train a model with </span><strong><span>10 billion</span></strong><span> parameters. We will use fp16 to store the model parameters and gradients, but use fp32 to keep the optimizer states (</span><a href="https://arxiv.org/pdf/1710.03740" target="_blank" rel="noopener"><span>mixed-precision training</span></a><span>). How much memory is required? (answer in GB)</span></p>
 </div><div class="alert alert-info">
-<p><strong><span>Question 1.5</span></strong><span>: In distributed data parallel, the workers have to communicate after each iteration in order to synchronize gradients. Suppose that we have W workers, our model has P parameters, our network bandwidth is B (between any pair of workers), and we use a ring all-reduce algorithm. Write down an expression that captures the time it takes for the gradient synchronization.</span></p>
+<p><strong><span>Question 1.5</span></strong><span>: In distributed data
+ parallel, the workers have to communicate after each iteration in order
+ to synchronize gradients. Suppose that we have W workers, our model has
+ P parameters, our network bandwidth is B (between any pair of workers),
+ and we use a ring all-reduce algorithm. Write down an expression that 
+captures the time it takes for the gradient synchronization.</span></p>
 </div><div class="alert alert-info">
 <p><strong><span>Question 1.6</span></strong><span>: Now let's plug in real values to the above expression. Assume that we have </span><strong><span>8</span></strong><span> workers, </span><strong><span>10 billion</span></strong><span> parameters, and we use fp16 for parameters and gradients, but fp32 to keep optimizer states. Assume the network bandwidth is </span><strong><span>100 Gb/s</span></strong><span>. Provide your answer in seconds.</span></p>
-</div><h3 id="Deliverables-for-Mid-Project-Checkpoint-Due-on-204" data-id="Deliverables-for-Mid-Project-Checkpoint-Due-on-204"><a class="anchor hidden-xs" href="#Deliverables-for-Mid-Project-Checkpoint-Due-on-204" title="Deliverables-for-Mid-Project-Checkpoint-Due-on-204"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Deliverables for Mid-Project Checkpoint Due on 2/04</span></h3><p><span>For the mid-project check-in, we want you to have implemented DDP and have the correctness tests running (task 1.1). The test does not need to be successful, but you should have an attempt at the code.</span></p><h2 id="Part-2-Model-Parallelism" data-id="Part-2-Model-Parallelism"><a class="anchor hidden-xs" href="#Part-2-Model-Parallelism" title="Part-2-Model-Parallelism"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Part 2: Model Parallelism</span></h2><p><span>Model parallelism works by splitting the model into layers, and putting partitions of contiguous layers on each device. The forward pass goes through the partitions in order, while the backward pass propagates gradients in reverse order. Model parallelism reduces communication overhead compared to DDP because communication only happens at partition boundaries. However, default model parallelism has very low worker utilization because only one worker is running at a time. We will explore a way to improve this in the next part of the assignment.</span></p><p><span>For now, in this part of the assignment, you will create a model parallel wrapper class inside pytorch for model parallel training of the VGG16 model on CPUs, and inspect its throughput, as well as a timeline of when computation occurs on each worker.</span></p><h3 id="Code-Structure-for-Model-Parallelisn" data-id="Code-Structure-for-Model-Parallelisn"><a class="anchor hidden-xs" href="#Code-Structure-for-Model-Parallelisn" title="Code-Structure-for-Model-Parallelisn"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Code Structure for Model Parallelisn</span></h3><p><span>The code for model parallelism is structured slightly differently than the data parallel wrapper. We recommend taking a look at it before starting to understand the differences (in </span><code>/model_parallel.py</code><span>):</span></p><ol style="padding-left: 2em;">
+</div><h3 id="Deliverables-for-Mid-Project-Checkpoint-Due-on-204" data-id="Deliverables-for-Mid-Project-Checkpoint-Due-on-204"><a class="anchor hidden-xs" href="#Deliverables-for-Mid-Project-Checkpoint-Due-on-204" title="Deliverables-for-Mid-Project-Checkpoint-Due-on-204"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Deliverables for Mid-Project Checkpoint Due on 2/04</span></h3><p><span>For
+ the mid-project check-in, we want you to have implemented DDP and have 
+the correctness tests running (task 1.1). The test does not need to be 
+successful, but you should have an attempt at the code.</span></p><h2 id="Part-2-Model-Parallelism" data-id="Part-2-Model-Parallelism"><a class="anchor hidden-xs" href="#Part-2-Model-Parallelism" title="Part-2-Model-Parallelism"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Part 2: Model Parallelism</span></h2><p><span>Model
+ parallelism works by splitting the model into layers, and putting 
+partitions of contiguous layers on each device. The forward pass goes 
+through the partitions in order, while the backward pass propagates 
+gradients in reverse order. Model parallelism reduces communication 
+overhead compared to DDP because communication only happens at partition
+ boundaries. However, default model parallelism has very low worker 
+utilization because only one worker is running at a time. We will 
+explore a way to improve this in the next part of the assignment.</span></p><p><span>For
+ now, in this part of the assignment, you will create a model parallel 
+wrapper class inside pytorch for model parallel training of the VGG16 
+model on CPUs, and inspect its throughput, as well as a timeline of when
+ computation occurs on each worker.</span></p><h3 id="Code-Structure-for-Model-Parallelisn" data-id="Code-Structure-for-Model-Parallelisn"><a class="anchor hidden-xs" href="#Code-Structure-for-Model-Parallelisn" title="Code-Structure-for-Model-Parallelisn"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Code Structure for Model Parallelisn</span></h3><p><span>The
+ code for model parallelism is structured slightly differently than the 
+data parallel wrapper. We recommend taking a look at it before starting 
+to understand the differences (in </span><code>/model_parallel.py</code><span>):</span></p><ol style="padding-left: 2em;">
 <li>
 <p><span>Instead of a single wrapper, there are two wrappers: one which the training loop uses (</span><code>ModelParallelWrapper</code><span>) to orchestrate forward and backward passes on each worker, and </span><code>ModelParallelWorker</code><span>, which actually does the forward and backward pass on each worker, communicating with the previous and next partition.</span></p>
 </li>
 <li>
-<p><span>The </span><code>train_vgg16_cifar10_model_parallel</code><span> additionally calls a method called </span><code>split_vgg16</code><span> to partition the model into partitions, and then passes a partition to each worker. This shows how in model parallel, the entire model is actually </span><em><span>split</span></em><span> across workers, and there is no immediate memory overhead.</span></p>
+<p><span>The </span><code>train_vgg16_cifar10_model_parallel</code><span> additionally calls a method called </span><code>split_vgg16</code><span>
+ to partition the model into partitions, and then passes a partition to 
+each worker. This shows how in model parallel, the entire model is 
+actually </span><em><span>split</span></em><span> across workers, and there is no immediate memory overhead.</span></p>
 </li>
 <li>
-<p><span>As with DDP, feel free to add any state to the wrapper classes you might need for implementing the method or for debugging (in the </span><code>__init__</code><span>) function.</span></p>
+<p><span>As with DDP, feel free to add any state to the wrapper classes 
+you might need for implementing the method or for debugging (in the </span><code>__init__</code><span>) function.</span></p>
 </li>
-</ol><h3 id="Implement-Model-Parallelism" data-id="Implement-Model-Parallelism"><a class="anchor hidden-xs" href="#Implement-Model-Parallelism" title="Implement-Model-Parallelism"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Implement Model Parallelism</span></h3><p><span>We have divided the implementation for model parallelism into 3 parts: figuring out the communication sizes for each partition boundary, the forward pass, and the backward pass.</span></p><h4 id="Model-Parallel-Part-1-Calculate-communication-sizes-at-each-partition-boundary" data-id="Model-Parallel-Part-1-Calculate-communication-sizes-at-each-partition-boundary"><a class="anchor hidden-xs" href="#Model-Parallel-Part-1-Calculate-communication-sizes-at-each-partition-boundary" title="Model-Parallel-Part-1-Calculate-communication-sizes-at-each-partition-boundary"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Model Parallel Part 1: Calculate communication sizes at each partition boundary</span></h4><div class="alert alert-success">
+</ol><h3 id="Implement-Model-Parallelism" data-id="Implement-Model-Parallelism"><a class="anchor hidden-xs" href="#Implement-Model-Parallelism" title="Implement-Model-Parallelism"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Implement Model Parallelism</span></h3><p><span>We
+ have divided the implementation for model parallelism into 3 parts: 
+figuring out the communication sizes for each partition boundary, the 
+forward pass, and the backward pass.</span></p><h4 id="Model-Parallel-Part-1-Calculate-communication-sizes-at-each-partition-boundary" data-id="Model-Parallel-Part-1-Calculate-communication-sizes-at-each-partition-boundary"><a class="anchor hidden-xs" href="#Model-Parallel-Part-1-Calculate-communication-sizes-at-each-partition-boundary" title="Model-Parallel-Part-1-Calculate-communication-sizes-at-each-partition-boundary"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Model Parallel Part 1: Calculate communication sizes at each partition boundary</span></h4><div class="alert alert-success">
 <p><strong><span>Task 2.1</span></strong><br>
-<span>In </span><code>utils.py</code><span>, fill in the function </span><code>analyze_communication_with_partitons</code><span>. You will be using MPI point to point communication functions to move data between workers during the forward and backward passes, and these functions require the receiver to know </span><em><span>how much</span></em><span> data will exactly be received. This function will later be used for pipeline parallel as well.</span></p>
+<span>In </span><code>utils.py</code><span>, fill in the function </span><code>analyze_communication_with_partitons</code><span>.
+ You will be using MPI point to point communication functions to move 
+data between workers during the forward and backward passes, and these 
+functions require the receiver to know </span><em><span>how much</span></em><span> data will exactly be received. This function will later be used for pipeline parallel as well.</span></p>
 <details><summary><span><span>hint</span></span></summary>
-<p><span>We recommend writing code to run the forward and backward pass to understand what data will be communicated. This will require the use of torch.autograd.grad.</span></p>
+<p><span>We recommend writing code to run the forward and backward pass 
+to understand what data will be communicated. This will require the use 
+of torch.autograd.grad.</span></p>
 </details>
 </div><p><span>We have provided a command with which you can check this is implemented correctly:</span></p><div class="code-block-wrapper"><div class="code-toolbar"><button class="rounded text-normal font-normal leading-normal flex bg-transparent text-text-default border border-solid border-transparent hocus:bg-element-bg-hover hocus:text-text-emphasize hover:border-element-bg-hover focus:shadow-[0_0_0_2px_#77777733] focus:border-element-border-hover disabled:bg-transparent disabled:hocus:bg-transparent disabled:hocus:border-transparent disabled:text-element-text-disabled disabled:hocus:text-element-text-disabled ui-code-block-copy-button p-[7px]" data-state="closed"><i class="inline-flex ph ph-clipboard-text" aria-hidden="true" style="width: 20px; height: 20px; font-size: 20px; line-height: 20px;"></i></button></div>
         <pre><code class="shell hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code">python3 comm_test.py
@@ -304,13 +427,17 @@ python3 plot.py throughput ddp=1,ddp=2,ddp=4 --output graphs/ddp_throughput_comp
 <p><strong><span>Task 2.2</span></strong><br>
 <span>Next, in </span><code>model_parallel.py</code><span>, inside both the </span><code>ModelParallelWrapper</code><span> and </span><code>ModelParallelWorker</code><span> classes, please fill in the </span><code>forward</code><span> functions.</span></p>
 <details><summary><span><span>hint</span></span></summary>
-<p><span>We recommend using the MPI point to point communication primitives to communicate data between workers. You can access communication through the </span><code>dist</code><span> library; see MPI's </span><code>send</code><span> and </span><code>recv</code><span> functions.</span></p>
+<p><span>We recommend using the MPI point to point communication 
+primitives to communicate data between workers. You can access 
+communication through the </span><code>dist</code><span> library; see MPI's </span><code>send</code><span> and </span><code>recv</code><span> functions.</span></p>
 </details>
 </div><p><span>:::</span></p><h4 id="Model-Parallel-Part-3-Implement-backward-pass" data-id="Model-Parallel-Part-3-Implement-backward-pass"><a class="anchor hidden-xs" href="#Model-Parallel-Part-3-Implement-backward-pass" title="Model-Parallel-Part-3-Implement-backward-pass"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Model Parallel Part 3: Implement backward pass</span></h4><div class="alert alert-success">
 <p><strong><span>Task 2.3</span></strong><br>
 <span>Finally, in </span><code>model_parallel.py</code><span>, inside both the </span><code>ModelParallelWrapper</code><span> and the </span><code>ModelParallelWorker</code><span> classes, please fill in the </span><code>backward</code><span> functions.</span></p>
 <details><summary><span><span>hint</span></span></summary>
-<p><span>Remember that you will need to use torch.autograd.grad to calculate gradients; remember that this calculation requires the outputs and inputs at that layer.</span></p>
+<p><span>Remember that you will need to use torch.autograd.grad to 
+calculate gradients; remember that this calculation requires the outputs
+ and inputs at that layer.</span></p>
 </details>
 </div><p><span>After all these tasks are done, use following command to test correctness:</span></p><div class="code-block-wrapper"><div class="code-toolbar"><button class="rounded text-normal font-normal leading-normal flex bg-transparent text-text-default border border-solid border-transparent hocus:bg-element-bg-hover hocus:text-text-emphasize hover:border-element-bg-hover focus:shadow-[0_0_0_2px_#77777733] focus:border-element-border-hover disabled:bg-transparent disabled:hocus:bg-transparent disabled:hocus:border-transparent disabled:text-element-text-disabled disabled:hocus:text-element-text-disabled ui-code-block-copy-button p-[7px]" data-state="closed"><i class="inline-flex ph ph-clipboard-text" aria-hidden="true" style="width: 20px; height: 20px; font-size: 20px; line-height: 20px;"></i></button></div>
         <pre><code class="sh hljs">python train.py --num_batches 2 --num_workers 2 --learning_rate 1e-3 --batch_size 32 --check_output model
@@ -318,7 +445,10 @@ python3 plot.py throughput ddp=1,ddp=2,ddp=4 --output graphs/ddp_throughput_comp
 </code></pre>
       </div><h3 id="Performance-Analysis24" data-id="Performance-Analysis"><a class="anchor hidden-xs" href="#Performance-Analysis24" title="Performance-Analysis24"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Performance Analysis</span></h3><div class="alert alert-success">
 <p><strong><span>Task 2.4</span></strong><br>
-<span>Generate a timeline graph for model parallel with 3 workers and place it here. This timeline graph shows what computation is happening on each worker across an entire iteration. To do this, run the following commands:</span></p>
+<span>Generate a timeline graph for model parallel with 3 workers and 
+place it here. This timeline graph shows what computation is happening 
+on each worker across an entire iteration. To do this, run the following
+ commands:</span></p>
 
       <div class="code-block-wrapper"><div class="code-toolbar"><button class="rounded text-normal font-normal leading-normal flex bg-transparent text-text-default border border-solid border-transparent hocus:bg-element-bg-hover hocus:text-text-emphasize hover:border-element-bg-hover focus:shadow-[0_0_0_2px_#77777733] focus:border-element-border-hover disabled:bg-transparent disabled:hocus:bg-transparent disabled:hocus:border-transparent disabled:text-element-text-disabled disabled:hocus:text-element-text-disabled ui-code-block-copy-button p-[7px]" data-state="closed"><i class="inline-flex ph ph-clipboard-text" aria-hidden="true" style="width: 20px; height: 20px; font-size: 20px; line-height: 20px;"></i></button></div>
         <pre><code class="sh hljs">python3 train.py --num_workers 3 model
@@ -329,13 +459,16 @@ python3 plot.py --output model_timeline.png timeline model=3
       </div>
       
 <p><span>Note that this command will produce the plot in </span><code>$REPO/graphs/model_timeline.png</code><span>.</span></p>
-<p><strong><span>Please include your generated graph here. If you are not able to finish this part of the assignment, we have provided a reference graph (generated on the grading server) for you to answer the question below.</span></strong></p>
+<p><strong><span>Please include your generated graph here. If you are 
+not able to finish this part of the assignment, we have provided a 
+reference graph (generated on the grading server) for you to answer the 
+question below.</span></strong></p>
 </div><div class="alert alert-info">
 <p><strong><span>Question 2.1</span></strong><br>
 <span>Analyze the above timeline graph. Does it match your expectations of what model parallelism should be doing on each worker?</span><br>
 <span>If you were not able to generate the graph, we have provided a reference version from the grading server:</span></p>
 <div style="text-align: center;">
-<img src="https://hackmd.io/_uploads/BJrD28LdJl.png" style="zoom:75%" class="offline-handled error-handled">
+<img src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/upload_dee3c830e1dc0719dc6f41daad7d10fd.png" style="zoom:75%" class="offline-handled error-handled">
 </div>
 </div><div class="alert alert-success">
 <p><span>Task 2.5: Generate a throughput graph for model parallelism</span></p>
@@ -351,27 +484,52 @@ python3 plot.py throughput  model=1,model=2,model=3 --output model_throughput_co
       </div>
       
 <p><span>Note that this command will produce the plot in </span><code>$REPO/model_throughput_comparison.png</code><span>.</span></p>
-<p><strong><span>Please include your generated graph here. If you are not able to finish this part of the assignment, we have provided a reference graph (generated on the grading server) for you to answer the question below.</span></strong></p>
+<p><strong><span>Please include your generated graph here. If you are 
+not able to finish this part of the assignment, we have provided a 
+reference graph (generated on the grading server) for you to answer the 
+question below.</span></strong></p>
 </div><div class="alert alert-info">
-<p><strong><span>Question 2.2</span></strong><span>: Analyze the above throughput graph. Does it match your expectations of how model parallelism should scale as the number of workers increases?</span><br>
+<p><strong><span>Question 2.2</span></strong><span>: Analyze the above 
+throughput graph. Does it match your expectations of how model 
+parallelism should scale as the number of workers increases?</span><br>
 <span>If you were not able to generate the graph, we have provided a reference version from the grading server:</span></p>
 <div style="text-align: center;">
-<img src="https://hackmd.io/_uploads/Sk-1pIIuJe.png" style="zoom:60%" class="offline-handled error-handled">
+<img src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/upload_3ea2772216ba43230f784c472225e3f2.png" style="zoom:60%" class="offline-handled error-handled">
 </div>
 </div><h3 id="Math-time-Comparison-of-Communication-in-Model-Parallel-vs-DDP" data-id="Math-time-Comparison-of-Communication-in-Model-Parallel-vs-DDP"><a class="anchor hidden-xs" href="#Math-time-Comparison-of-Communication-in-Model-Parallel-vs-DDP" title="Math-time-Comparison-of-Communication-in-Model-Parallel-vs-DDP"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Math time: Comparison of Communication in Model Parallel vs. DDP</span></h3><div class="alert alert-info">
-<p><strong><span>Question 2.3</span></strong><span>: In distributed data parallel, the workers have to communicate after each iteration in order to synchronize gradients (as you explored in Questions 1.5 and 1.6). In model parallelism, communication happens at partition boundaries. Assume that there are L total layers, divided into P partitions (equally). The input batch size is B.</span></p>
+<p><strong><span>Question 2.3</span></strong><span>: In distributed data
+ parallel, the workers have to communicate after each iteration in order
+ to synchronize gradients (as you explored in Questions 1.5 and 1.6). In
+ model parallelism, communication happens at partition boundaries. 
+Assume that there are L total layers, divided into P partitions 
+(equally). The input batch size is B.</span></p>
 <ul>
 <li><span>How much communication occurs (across all partitions in aggregate) during the forward pass?</span></li>
 <li><span>How much communication occurs (across all partitions in aggregate) during the backward pass?</span></li>
 </ul>
 <p><span>When we say "how much", we mean the amount of data that is being transferred in one iteration.</span></p>
-</div><h3 id="Deliverables-for-Mid-Project-Checkpoint-Due-on-20426" data-id="Deliverables-for-Mid-Project-Checkpoint-Due-on-204"><a class="anchor hidden-xs" href="#Deliverables-for-Mid-Project-Checkpoint-Due-on-20426" title="Deliverables-for-Mid-Project-Checkpoint-Due-on-20426"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Deliverables for Mid-Project Checkpoint Due on 2/04</span></h3><p><span>For the mid-project check-in, we want you to have implemented model parallelism and have the correctness tests running (tasks 2.1-2.3). The test does not need to be successful, but you should have an attempt at the code.</span></p><h2 id="Part-3-Reducing-the-Memory-Overhead-of-DDP" data-id="Part-3-Reducing-the-Memory-Overhead-of-DDP"><a class="anchor hidden-xs" href="#Part-3-Reducing-the-Memory-Overhead-of-DDP" title="Part-3-Reducing-the-Memory-Overhead-of-DDP"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Part 3: Reducing the Memory Overhead of DDP</span></h2><p><span>One downside of DDP is that it requires the entire model to be loaded on a single device. To reduce the memory overhead of the model, its tensors can be sharded across devices. Whenever a device requires the entire tensor (during a forward or backward pass), the tensor can be gathered to perform the computation and then freed. Each device is responsible for its own shard, and updates it accordingly.</span></p><p><span>In this part of the assignment, you will implement a simplified version of FSDP (Fully Sharded Data Parallel). Once implemented, FSDP will be compared to DDP to understand how the two methods scale.</span></p><h3 id="Implement-FSDP" data-id="Implement-FSDP"><a class="anchor hidden-xs" href="#Implement-FSDP" title="Implement-FSDP"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Implement FSDP</span></h3><p><span>Just like DDP and Model Parallel, fill in the blank section in the </span><code>fsdp.py</code><span> file. Note the </span><code>init_local_info</code><span> and </span><code>init_layers_and_params</code><span> methods, they set up the sharded tensors that you will be working with.</span></p><div class="alert alert-success">
+</div><h3 id="Deliverables-for-Mid-Project-Checkpoint-Due-on-20426" data-id="Deliverables-for-Mid-Project-Checkpoint-Due-on-204"><a class="anchor hidden-xs" href="#Deliverables-for-Mid-Project-Checkpoint-Due-on-20426" title="Deliverables-for-Mid-Project-Checkpoint-Due-on-20426"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Deliverables for Mid-Project Checkpoint Due on 2/04</span></h3><p><span>For
+ the mid-project check-in, we want you to have implemented model 
+parallelism and have the correctness tests running (tasks 2.1-2.3). The 
+test does not need to be successful, but you should have an attempt at 
+the code.</span></p><h2 id="Part-3-Reducing-the-Memory-Overhead-of-DDP" data-id="Part-3-Reducing-the-Memory-Overhead-of-DDP"><a class="anchor hidden-xs" href="#Part-3-Reducing-the-Memory-Overhead-of-DDP" title="Part-3-Reducing-the-Memory-Overhead-of-DDP"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Part 3: Reducing the Memory Overhead of DDP</span></h2><p><span>One
+ downside of DDP is that it requires the entire model to be loaded on a 
+single device. To reduce the memory overhead of the model, its tensors 
+can be sharded across devices. Whenever a device requires the entire 
+tensor (during a forward or backward pass), the tensor can be gathered 
+to perform the computation and then freed. Each device is responsible 
+for its own shard, and updates it accordingly.</span></p><p><span>In 
+this part of the assignment, you will implement a simplified version of 
+FSDP (Fully Sharded Data Parallel). Once implemented, FSDP will be 
+compared to DDP to understand how the two methods scale.</span></p><h3 id="Implement-FSDP" data-id="Implement-FSDP"><a class="anchor hidden-xs" href="#Implement-FSDP" title="Implement-FSDP"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Implement FSDP</span></h3><p><span>Just like DDP and Model Parallel, fill in the blank section in the </span><code>fsdp.py</code><span> file. Note the </span><code>init_local_info</code><span> and </span><code>init_layers_and_params</code><span> methods, they set up the sharded tensors that you will be working with.</span></p><div class="alert alert-success">
 <p><strong><span>Task 3.1</span></strong></p>
 <ol style="padding-left: 2em;">
 <li><span>Implement the </span><code>FullyShardedDataParllel</code><span> class. This class is the wrapper used for a single worker.</span></li>
 <li><span>Complete the training process in </span><code>train_vgg16_cifar10_fsdp</code><span>.</span></li>
 <li><span>Use the correctness test command below to ensure your implementation is right.</span></li>
-<li><span>As with DDP and model parallel, feel free to add any state to the wrapper class you might need for implementing the method or for debugging (in the </span><code>__init__</code><span>) function.</span></li>
+<li><span>As with DDP and model parallel, feel free to add any state to 
+the wrapper class you might need for implementing the method or for 
+debugging (in the </span><code>__init__</code><span>) function.</span></li>
 </ol>
 </div><h3 id="Check-FSDP-for-Correctness" data-id="Check-FSDP-for-Correctness"><a class="anchor hidden-xs" href="#Check-FSDP-for-Correctness" title="Check-FSDP-for-Correctness"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Check FSDP for Correctness</span></h3><p><span>Once you've implemented FSDP, you can use the following command to check whether your implementation is correct:</span></p><div class="code-block-wrapper"><div class="code-toolbar"><button class="rounded text-normal font-normal leading-normal flex bg-transparent text-text-default border border-solid border-transparent hocus:bg-element-bg-hover hocus:text-text-emphasize hover:border-element-bg-hover focus:shadow-[0_0_0_2px_#77777733] focus:border-element-border-hover disabled:bg-transparent disabled:hocus:bg-transparent disabled:hocus:border-transparent disabled:text-element-text-disabled disabled:hocus:text-element-text-disabled ui-code-block-copy-button p-[7px]" data-state="closed"><i class="inline-flex ph ph-clipboard-text" aria-hidden="true" style="width: 20px; height: 20px; font-size: 20px; line-height: 20px;"></i></button></div>
         <pre><code class="sh hljs">​​python train.py fsdp --num_batches 2 --num_workers 2 --learning_rate 1e-2 --batch_size 32 --check_weights --check_output
@@ -393,21 +551,34 @@ python3 plot.py throughput fsdp=1,fsdp=2,fsdp=4 --output fsdp_throughput_compari
       </div>
       
 <p><span>Note that this command will produce the plot in </span><code>$REPO/fsdp_throughput_comparison.png</code><span>.</span></p>
-<p><strong><span>Please include your generated graph here. If you are not able to finish this part of the assignment, we have provided a reference graph (generated on the grading server) for you to answer the question below.</span></strong></p>
+<p><strong><span>Please include your generated graph here. If you are 
+not able to finish this part of the assignment, we have provided a 
+reference graph (generated on the grading server) for you to answer the 
+question below.</span></strong></p>
 </div><div class="alert alert-info">
 <p><strong><span>Question 3.1</span></strong><br>
-<span>Please analyze the scalability of your FSDP implementation. Compare this graph to the previous DDP throughout graph. Do the two methods scale as you expected? Why or why not? Which one has better raw performance? Why? How does the communication required for FSDP and DDP differ?</span></p>
+<span>Please analyze the scalability of your FSDP implementation. 
+Compare this graph to the previous DDP throughout graph. Do the two 
+methods scale as you expected? Why or why not? Which one has better raw 
+performance? Why? How does the communication required for FSDP and DDP 
+differ?</span></p>
 <p><span>If you were not able to generate the graph, we have provided a reference version from the grading server:</span></p>
 <div style="text-align: center;">
-<img src="https://hackmd.io/_uploads/SJYwqPUuyg.png" style="zoom:60%" class="offline-handled error-handled">
+<img src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/upload_73ff234321b436b52950b96a5175b1d2.png" style="zoom:60%" class="offline-handled error-handled">
 </div>
 </div><h3 id="Math-Time-Memory-Overhead-of-DDP-vs-FSDP" data-id="Math-Time-Memory-Overhead-of-DDP-vs-FSDP"><a class="anchor hidden-xs" href="#Math-Time-Memory-Overhead-of-DDP-vs-FSDP" title="Math-Time-Memory-Overhead-of-DDP-vs-FSDP"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Math Time: Memory Overhead of DDP vs. FSDP</span></h3><div class="alert alert-info">
 <p><strong><span>Question 3.2</span></strong><br>
-<span>Our implementation of FSDP only handled sharding the parameter states, but in reality, a full implementation would shard the gradients during the backward pass, and the optimizer state as well. Let's return to the scenario from Question 1.3 and 1.4, but instead consider Adam.</span><br>
+<span>Our implementation of FSDP only handled sharding the parameter 
+states, but in reality, a full implementation would shard the gradients 
+during the backward pass, and the optimizer state as well. Let's return 
+to the scenario from Question 1.3 and 1.4, but instead consider Adam.</span><br>
 <span>Specifically:</span></p>
 <ul>
 <li><span>We have a model with P parameters.</span></li>
-<li><span>The Adam optimizer stores the parameters,  momentum and variance, for a total of 3P state. Again assume that the all data is stored with the same precision (e.g., all fp32 or all fp16), so you do not need to account for the precision in your answer.</span><br>
+<li><span>The Adam optimizer stores the parameters,  momentum and 
+variance, for a total of 3P state. Again assume that the all data is 
+stored with the same precision (e.g., all fp32 or all fp16), so you do 
+not need to account for the precision in your answer.</span><br>
 <span>Write expressions that capture the following, when we have W workers:</span></li>
 </ul>
 <ol style="padding-left: 2em;">
@@ -418,25 +589,39 @@ python3 plot.py throughput fsdp=1,fsdp=2,fsdp=4 --output fsdp_throughput_compari
 </ol>
 </div><div class="alert alert-info">
 <p><strong><span>Question 3.3</span></strong><br>
-<span>Now let's plug in some values above. We are again using mixed-precision training, where models and gradients are stored in fp16, but the optimizer states are stored in fp32. Our model has 10 billion parameters. In bytes, what is the memory overhead per worker, when:</span></p>
+<span>Now let's plug in some values above. We are again using 
+mixed-precision training, where models and gradients are stored in fp16,
+ but the optimizer states are stored in fp32. Our model has 10 billion 
+parameters. In bytes, what is the memory overhead per worker, when:</span></p>
 <ol style="padding-left: 2em;">
 <li><span>The optimizer is sharded</span></li>
 <li><span>The optimizer and gradients are sharded</span></li>
 <li><span>Everything is sharded.</span></li>
 </ol>
 <p><span>For full credit, please write out exactly how you arrived at these values.</span></p>
-</div><h2 id="Part-4-Pipeline-Parallelism" data-id="Part-4-Pipeline-Parallelism"><a class="anchor hidden-xs" href="#Part-4-Pipeline-Parallelism" title="Part-4-Pipeline-Parallelism"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Part 4: Pipeline Parallelism</span></h2><p><span>In model parallelism, backpropagation begins only after forward propagation is completed, which leads to low resource utilization on worker nodes. To improve resource utilization, we can introduce pipelining, by dividing the data into multiple microbatches. By doing so, the computation processes of different microbatches can overlap in time, enhancing resource utilization.</span></p><h3 id="Implement-Pipeline-Parallelism" data-id="Implement-Pipeline-Parallelism"><a class="anchor hidden-xs" href="#Implement-Pipeline-Parallelism" title="Implement-Pipeline-Parallelism"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Implement Pipeline Parallelism</span></h3><div class="alert alert-success">
+</div><h2 id="Part-4-Pipeline-Parallelism" data-id="Part-4-Pipeline-Parallelism"><a class="anchor hidden-xs" href="#Part-4-Pipeline-Parallelism" title="Part-4-Pipeline-Parallelism"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Part 4: Pipeline Parallelism</span></h2><p><span>In
+ model parallelism, backpropagation begins only after forward 
+propagation is completed, which leads to low resource utilization on 
+worker nodes. To improve resource utilization, we can introduce 
+pipelining, by dividing the data into multiple microbatches. By doing 
+so, the computation processes of different microbatches can overlap in 
+time, enhancing resource utilization.</span></p><h3 id="Implement-Pipeline-Parallelism" data-id="Implement-Pipeline-Parallelism"><a class="anchor hidden-xs" href="#Implement-Pipeline-Parallelism" title="Implement-Pipeline-Parallelism"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Implement Pipeline Parallelism</span></h3><div class="alert alert-success">
 <p><strong><span>Task 4.1</span></strong><br>
 <span>The overall workflow of the pipeline is very similar to model parallelism, but notice the new </span><code>microbatch_idx</code><span> parameter which is to keep track of currently processed data.</span></p>
 <ol style="padding-left: 2em;">
 <li><span>Implement class </span><code>PipelineParallelWorker</code><span>: </span><code>forward</code><span> and </span><code>backward</code></li>
 <li><span>Implement class </span><code>PipelineParallel</code><span>. </span><code>forward</code><span>, </span><code>backward</code><span>, </span><code>train_step</code><span> and </span><code>eval</code><span>:</span>
 <ul>
-<li><span>Note that </span><code>eval</code><span> and </span><code>train_step</code><span> may have some repeated logic; eval is for actually running the model (in microbatches) without the backward pass when running the correctness test.</span></li>
+<li><span>Note that </span><code>eval</code><span> and </span><code>train_step</code><span>
+ may have some repeated logic; eval is for actually running the model 
+(in microbatches) without the backward pass when running the correctness
+ test.</span></li>
 </ul>
 </li>
 <li><span>Pass the correctness test.</span></li>
-<li><span>As with the previous methods, feel free to add any state to the wrapper classeses you might need for implementing the method or for debugging (in the </span><code>__init__</code><span>) function.</span></li>
+<li><span>As with the previous methods, feel free to add any state to 
+the wrapper classeses you might need for implementing the method or for 
+debugging (in the </span><code>__init__</code><span>) function.</span></li>
 </ol>
 </div><details><summary><span><span>correctness check command</span></span></summary>
 
@@ -457,13 +642,16 @@ python3 plot.py timeline --output pipeline_timeline.png pipeline=3
       </div>
       
 <p><span>Note that this command will produce the plot in </span><code>$REPO/pipeline_timeline.png</code><span>.</span></p>
-<p><strong><span>Please include your generated graph here. If you are not able to finish this part of the assignment, we have provided a reference graph (generated on the grading server) for you to answer the question below.</span></strong></p>
+<p><strong><span>Please include your generated graph here. If you are 
+not able to finish this part of the assignment, we have provided a 
+reference graph (generated on the grading server) for you to answer the 
+question below.</span></strong></p>
 </div><p><span>Note that the above command stores the graph in </span><code>$REPO/pipeline_timeline.png</code></p><div class="alert alert-info">
 <p><strong><span>Question 4.1</span></strong><br>
 <span>Analyze the above timeline graph. Does it match your expectations of what pipeline parallelism should be doing on each worker?</span><br>
 <span>If you were not able to generate the graph, we have provided a reference version from the grading server:</span></p>
 <div style="text-align: center;">
-<img src="https://hackmd.io/_uploads/rJkWEwLd1l.png" style="zoom:75%" class="offline-handled error-handled">
+<img src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/upload_1dc333c4ebbfd8c703daf36ed599daff.png" style="zoom:75%" class="offline-handled error-handled">
 </div>
 </div><div class="alert alert-success">
 <p><strong><span>Task 4.3</span></strong><br>
@@ -480,31 +668,40 @@ python plot.py --output pipeline_throughput_comparison.png throughput pipeline=1
       </div>
       
 <p><span>Note that this command will produce the plot in </span><code>$REPO/pipeline_throughput_comparison.png</code><span>.</span></p>
-<p><strong><span>Please include your generated graph here. If you are not able to finish this part of the assignment, we have provided a reference graph (generated on the grading server) for you to answer the question below.</span></strong></p>
+<p><strong><span>Please include your generated graph here. If you are 
+not able to finish this part of the assignment, we have provided a 
+reference graph (generated on the grading server) for you to answer the 
+question below.</span></strong></p>
 </div><div class="alert alert-info">
 <p><strong><span>Question 4.2</span></strong><br>
-<span>Analyze the above throughput graph. Does it match your expectations of how model pipeline should scale as the number of workers increases? How does the performance of pipeline parallelism compare with model parallelism and why?</span><br>
+<span>Analyze the above throughput graph. Does it match your 
+expectations of how model pipeline should scale as the number of workers
+ increases? How does the performance of pipeline parallelism compare 
+with model parallelism and why?</span><br>
 <span>If you were not able to generate the graph, we have provided a reference version from the grading server:</span></p>
 <div style="text-align: center;">
-<img src="https://hackmd.io/_uploads/HyXF4wIuJl.png" style="zoom:60%" class="offline-handled error-handled">
+<img src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/upload_973ae5fe8141f827af2681d2e6cc2d9a.png" style="zoom:60%" class="offline-handled error-handled">
 </div>
 </div><h3 id="Math-Time-Pipeline-Bubble-Size" data-id="Math-Time-Pipeline-Bubble-Size"><a class="anchor hidden-xs" href="#Math-Time-Pipeline-Bubble-Size" title="Math-Time-Pipeline-Bubble-Size"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Math Time: Pipeline Bubble Size</span></h3><div class="alert alert-info">
 <p><strong><span>Question 4.3</span></strong><br>
 <span>In the </span><a href="https://arxiv.org/pdf/1811.06965" target="_blank" rel="noopener"><span>GPipe</span></a><span> paper, </span><strong><span>section 2.3 Performance Optimization</span></strong><span>, the author proposed that the size of the pipeline bubble (the fraction of times when workers are not being utilized) is:</span><br>
-<span class="mathjax raw">\[
-O\left(\frac{K-1}{M+K-1}\right)
-\]</span><br>
-<span>Please derive this expression based on Figure 2a in the paper.</span></p>
+<span class="mathjax code-block-wrapper" data-raw-code="T1xsZWZ0KFxmcmFje0stMX17TStLLTF9XHJpZ2h0KQ" style="display: block;"></span></p><div class="code-toolbar"><button class="rounded text-normal font-normal leading-normal flex bg-transparent text-text-default border border-solid border-transparent hocus:bg-element-bg-hover hocus:text-text-emphasize hover:border-element-bg-hover focus:shadow-[0_0_0_2px_#77777733] focus:border-element-border-hover disabled:bg-transparent disabled:hocus:bg-transparent disabled:hocus:border-transparent disabled:text-element-text-disabled disabled:hocus:text-element-text-disabled ui-code-block-copy-button p-[7px]" data-state="closed"><i class="inline-flex ph ph-clipboard-text" aria-hidden="true" style="width: 20px; height: 20px; font-size: 20px; line-height: 20px;"></i></button></div><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" display="true" tabindex="0" ctxtmenu_counter="0"><mjx-math display="true" style="margin-left: 0px; margin-right: 0px;" class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mrow space="2"><mjx-mo class="mjx-s3"><mjx-c class="mjx-c28 TEX-S3"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-s3"><mjx-c class="mjx-c29 TEX-S3"></mjx-c></mjx-mo></mjx-mrow></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>O</mi><mrow data-mjx-texclass="INNER"><mo data-mjx-texclass="OPEN">(</mo><mfrac><mrow><mi>K</mi><mo>−</mo><mn>1</mn></mrow><mrow><mi>M</mi><mo>+</mo><mi>K</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo data-mjx-texclass="CLOSE">)</mo></mrow></math></mjx-assistive-mml></mjx-container><br>
+<span>Please derive this expression based on Figure 2a in the paper.</span><p></p>
 </div><p><span>Even though the approach in </span><a href="https://arxiv.org/pdf/1811.06965" target="_blank" rel="noopener"><span>GPipe</span></a><span> improves utilization over model parallelism, we can still observe idle gaps where workers are not being used. In the paper </span><a href="https://people.eecs.berkeley.edu/~matei/papers/2019/sosp_pipedream.pdf" target="_blank" rel="noopener"><span>PipeDream</span></a><span>, the authors proposed a different approach (with schedules called </span><strong><span>1F1B</span></strong><span> and </span><strong><span>1F2B</span></strong><span>).</span></p><div class="alert alert-info">
 <p><strong><span>Question 4.4</span></strong><br>
-<span>Referring to Figure 4, please briefly explain how </span><strong><span>1F2B</span></strong><span> reduces bubble size compare to mircobatch pipeline. To achieve this schedule, however, does Pipedream have to store any extra data in memory Gpipe would not have to otherwise?</span></p>
-</div><h2 id="Further-References" data-id="Further-References"><a class="anchor hidden-xs" href="#Further-References" title="Further-References"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Further References</span></h2><p><span>We recommend taking a look at these resources if you would like to learn more; we also drew on some of these resources to create the assignment!</span><br>
+<span>Referring to Figure 4, please briefly explain how </span><strong><span>1F2B</span></strong><span>
+ reduces bubble size compare to mircobatch pipeline. To achieve this 
+schedule, however, does Pipedream have to store any extra data in memory
+ Gpipe would not have to otherwise?</span></p>
+</div><h2 id="Further-References" data-id="Further-References"><a class="anchor hidden-xs" href="#Further-References" title="Further-References"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Further References</span></h2><p><span>We
+ recommend taking a look at these resources if you would like to learn 
+more; we also drew on some of these resources to create the assignment!</span><br>
 <a href="https://arxiv.org/pdf/1811.06965" target="_blank" rel="noopener"><span>GPipe Paper</span></a><br>
 <a href="https://deepakn94.github.io/assets/papers/pipedream-sosp19.pdf" target="_blank" rel="noopener"><span>Pipedream Paper</span></a><br>
 <a href="https://arxiv.org/pdf/1910.02054" target="_blank" rel="noopener"><span>ZeRO Paper</span></a><br>
 <a href="https://arxiv.org/pdf/1710.03740" target="_blank" rel="noopener"><span>Mixed Precision Training Paper</span></a><br>
 <a href="https://arxiv.org/pdf/2304.11277" target="_blank" rel="noopener"><span>Pytorch FSDP Paper</span></a></p></div>
-    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+    <div class="ui-toc dropup unselectable hidden-print" style="display: none; right: 343.5px;">
         <div class="pull-right dropdown">
             <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
                 <i class="fa fa-bars"></i>
@@ -561,7 +758,7 @@ O\left(\frac{K-1}{M+K-1}\right)
             </ul>
         </div>
     </div>
-    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print affix" data-spy="affix" style="top: 17px; left: 1076.5px;">
         <div class="toc"><ul class="nav">
 <li class=""><a href="#Assignment-1-Parallelism-Techniques-" title="Assignment 1: Parallelism Techniques   ">Assignment 1: Parallelism Techniques   </a></li>
 <li class=""><a href="#Introduction" title="Introduction">Introduction</a><ul class="nav">
@@ -611,9 +808,9 @@ O\left(\frac{K-1}{M+K-1}\right)
 </ul>
 </div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer="defer"></script>
+    <script src="Assignment%201_%20Parallelism%20Techniques%20-%20HackMD_files/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer="defer"></script>
     <script>
         var markdown = $(".markdown-body");
         //smooth all hash trigger scrolling
@@ -757,6 +954,7 @@ O\left(\frac{K-1}{M+K-1}\right)
             }, 100, "linear");
         }
     </script>
-</body>
 
-</html>
+
+
+</body></html>
