@@ -532,7 +532,11 @@ python3 plot.py throughput ddp=1,ddp=2,ddp=4 --output graphs/ddp_throughput_comp
 <li><code>train_vgg16_cifar10_model_parallel</code><span> additionally calls </span><code>split_vgg16</code><span> to partition the VGG16 model, and then passes a partition to each worker. This shows how with model parallelism, the entire model is actually </span><em><span>split</span></em><span> across workers, so there is no immediate memory overhead.</span></li>
 </ol><h2 id="Implement-Model-Parallelism" data-id="Implement-Model-Parallelism"><a class="anchor hidden-xs" href="#Implement-Model-Parallelism" title="Implement-Model-Parallelism"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Implement Model Parallelism</span></h2><p><span>We have divided the implementation for model parallelism into 4 parts: figuring out the communication sizes for each partition boundary, implementing the forward pass, implementing the backward pass, and then combining the forward and backward pass into a single training step.</span></p><div class="alert alert-success">
 <p><strong><span>Task 2.1</span></strong><span>: In </span><code>utils.py</code><span>, fill in the function </span><code>analyze_communication_with_partitions</code><span>. You will be using point-to-point communication functions to move data between workers during the forward and backward passes, and these functions require the receiver to know what exactly is the size of data that will be received.</span></p>
-<p><em><span>Hint: Consider what the gradient is that each partition receives. How could you determine its size?</span></em></p>
+<p><em><span>Hints:</span></em></p>
+<ul>
+<li><em><span>You'll want to perform a dummy forward pass to determine the output activations of each layer.</span></em></li>
+<li><em><span>Consider what the gradient is that each partition receives. How could you determine its size?</span></em></li>
+</ul>
 <p><span>You can verify the correctness of your implementation by running:</span></p>
 
       <div class="code-block-wrapper">
@@ -728,13 +732,17 @@ python3 plot.py throughput pipeline=1,pipeline=2,pipeline=3 --output pipeline_th
 </div><p><span>Even though the approach in </span><a href="https://arxiv.org/pdf/1811.06965" target="_blank" rel="noopener"><span>GPipe</span></a><span> improves utilization over model parallelism, we can still observe idle gaps where workers are not being used. In the paper </span><a href="https://people.eecs.berkeley.edu/~matei/papers/2019/sosp_pipedream.pdf" target="_blank" rel="noopener"><span>PipeDream</span></a><span>, the authors proposed a different approach (with a schedule called </span><strong><span>1F1B</span></strong><span>).</span></p><div class="alert alert-info">
 <p><strong><span>Question 4.4</span></strong>
 <span>Referring to Figure 4, does </span><strong><span>1F1B</span></strong><span> reduce bubble size compared to the GPipe version of pipeline parallelism? If so </span><span class="smartypants">–</span><span> why? If not </span><span class="smartypants">–</span><span> what are the benefits of the alternate schedule in terms of active memory use, compared to GPipe?</span></p>
-</div><h1 id="Further-References" data-id="Further-References"><a class="anchor hidden-xs" href="#Further-References" title="Further-References"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Further References</span></h1><p><span>We recommend taking a look at these resources if you would like to learn more; we also drew on some of these resources to create the assignment!</span></p><ul>
+</div>
+<p><strong><span>Congratulations, you've completed the first CS 1390 assignment!</span></strong><span> </span><img class="emoji offline-handled error-handled" alt=":tada:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/tada.png"></p>
+<h1 id="Further-References" data-id="Further-References"><a class="anchor hidden-xs" href="#Further-References" title="Further-References"><span class="octicon octicon-link ph ph-link-simple-horizontal"></span></a><span>Further References</span></h1><p><span>We recommend taking a look at these resources if you would like to learn more; we also drew on some of these resources to create the assignment!</span></p><ul>
 <li><a href="https://arxiv.org/pdf/1811.06965" target="_blank" rel="noopener"><span>GPipe Paper</span></a></li>
 <li><a href="https://deepakn94.github.io/assets/papers/pipedream-sosp19.pdf" target="_blank" rel="noopener"><span>Pipedream Paper</span></a></li>
 <li><a href="https://arxiv.org/pdf/1910.02054" target="_blank" rel="noopener"><span>ZeRO Paper</span></a></li>
 <li><a href="https://arxiv.org/pdf/1710.03740" target="_blank" rel="noopener"><span>Mixed Precision Training Paper</span></a></li>
 <li><a href="https://arxiv.org/pdf/2304.11277" target="_blank" rel="noopener"><span>Pytorch FSDP Paper</span></a></li>
-</ul></div>
+</ul>
+<hr><p><small><em><span>Acknowledgements:</span></em><span> This project was developed for CS 1390 by Sid Boppana, Nathan Harbison, Alice Song, and Deepti Raghavan. </span></small></p>
+</div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
             <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
