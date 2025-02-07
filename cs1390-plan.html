@@ -8,19 +8,10 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    ul.task-list{list-style: none;}
   </style>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -37,12 +28,10 @@
 </div>
 </div>
 <hr />
-<h1 id="csci-1390-spring-2025-systems-for-machine-learning">CSCI 1390,
-Spring 2025: Systems for Machine Learning</h1>
+<h1 id="csci-1390-spring-2025-systems-for-machine-learning">CSCI 1390, Spring 2025: Systems for Machine Learning</h1>
 <p>Class Meetings: Tuesdays, Thursdays 09:00 - 10:20, CIT 368</p>
 <p><a href="https://canvas.brown.edu/courses/1098542">Canvas</a></p>
-<p><a
-href="https://edstem.org/us/courses/74760/discussion">EdStem</a></p>
+<p><a href="https://edstem.org/us/courses/74760/discussion">EdStem</a></p>
 <hr style="border: none; border-top: 1px solid lightgrey; margin: 20px 0;">
 <h1 id="staff">Staff</h1>
 <div class="staff-profile">
@@ -62,7 +51,7 @@ href="https://edstem.org/us/courses/74760/discussion">EdStem</a></p>
   <div class="details">
     <strong>HTA:</strong> Nathan Harbison<br>
     <strong>Email:</strong> nathan_harbison@brown.edu<br>
-    <strong>Office Hours:</strong> Tuesdays and Thursdays 3-5, CIT 219
+    <strong>Office Hours:</strong> Tuesdays 1-3 and Thursdays 11-1, CIT 205
   </div>
 </div>
 <div class="staff-profile">
@@ -85,66 +74,21 @@ href="https://edstem.org/us/courses/74760/discussion">EdStem</a></p>
     <strong>Office Hours:</strong> Mondays 6-8 CIT 167 and Fridays 5-6 CIT 241
   </div>
 </div>
-<p>Course logistics are also available on this <a
-href="https://calendar.google.com/calendar/u/0?cid=Y19iMGQ4NGU0YjFhYWE5ZjZiZGZmZjJkNDc1ZTg4MzkxYmZkN2NhYjQ1OTRiODI4Zjg5ZWFkYWY5NjNmYjFjNGMwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20">calendar</a>.</p>
+<p>Course logistics are also available on this <a href="https://calendar.google.com/calendar/u/0?cid=Y19iMGQ4NGU0YjFhYWE5ZjZiZGZmZjJkNDc1ZTg4MzkxYmZkN2NhYjQ1OTRiODI4Zjg5ZWFkYWY5NjNmYjFjNGMwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20">calendar</a>.</p>
 <hr style="border: none; border-top: 1px solid lightgrey; margin: 20px 0;">
 <h1 id="description">Description</h1>
-<p>Many applications, across industries varying from ecommerce to
-education, rely on data processing and machine learning systems for data
-analytics tasks. Deep learning techniques are now being applied to
-problems such as search, coding assistants, and chip placement. Due to
-how widely used these applications are, performance, specifically
-latency, throughput, and hardware efficiency, is very important.
-However, achieving high performance in these systems can be
-challenging.</p>
-<p>This class will explore systems-related challenges related to
-building, training, deploying and managing large-scale data processing
-and machine learning systems. The learning goals of the class are for
-students to deeply understand the systems techniques that allow ML
-systems to be deployed efficiently, at scale. Topics include efficient
-training and inference, understanding how to build hardware ML
-algorithms, understanding ML algorithm performance, GPU programming and
-cuda, recent transformer architectures, efficient retrieval, and
-more.</p>
-<p>This is the first offering of this class; students should anticipate
-technical difficulties, and the course components and schedule are
-subject to change.</p>
+<p>Many applications, across industries varying from ecommerce to education, rely on data processing and machine learning systems for data analytics tasks. Deep learning techniques are now being applied to problems such as search, coding assistants, and chip placement. Due to how widely used these applications are, performance, specifically latency, throughput, and hardware efficiency, is very important. However, achieving high performance in these systems can be challenging.</p>
+<p>This class will explore systems-related challenges related to building, training, deploying and managing large-scale data processing and machine learning systems. The learning goals of the class are for students to deeply understand the systems techniques that allow ML systems to be deployed efficiently, at scale. Topics include efficient training and inference, understanding how to build hardware ML algorithms, understanding ML algorithm performance, GPU programming and cuda, recent transformer architectures, efficient retrieval, and more.</p>
+<p>This is the first offering of this class; students should anticipate technical difficulties, and the course components and schedule are subject to change.</p>
 <h1 id="registration">Registration</h1>
-<p>Due to constrained TA resources, this offering of CS 1390 will be
-capped at 56 students. Students requesting an override must (a) have
-fulfilled the prerequisites (CS 300, 330, or 1310, and one of (CS 410,
-1410, 1470, 2470, 1420) and (b) complete course assignments during
-shopping period. All registered students will be responsible for
-completing all course assignments regardless of when they register for
-the class. We will be managing the waitlist through the waitlist form
-some of you may have filled out. The class is <em>already full</em>, so
-unless registered students drop the class, we will not be letting
-students off the waitlist. <em>If you are planning to drop the
-class</em>, please do so ASAP so we can let students off the
-waitlist.</p>
-<p><strong>New waitlist form</strong>: <a
-href="https://docs.google.com/forms/d/18m6cb7MMsN9v3pmCCb7KTOPBI3EwmzT-ESH6vE4MaSo/preview">Waitlistform</a>
-Even if you filled out the old form, please fill out the new form; so we
-can keep track of folks who are still interested in the class. The TAs
-will also be posting it on EdStem.</p>
+<p>Due to constrained TA resources, this offering of CS 1390 will be capped at 56 students. Students requesting an override must (a) have fulfilled the prerequisites (CS 300, 330, or 1310, and one of (CS 410, 1410, 1470, 2470, 1420) and (b) complete course assignments during shopping period. All registered students will be responsible for completing all course assignments regardless of when they register for the class. We will be managing the waitlist through the waitlist form some of you may have filled out. The class is <em>already full</em>, so unless registered students drop the class, we will not be letting students off the waitlist. <em>If you are planning to drop the class</em>, please do so ASAP so we can let students off the waitlist.</p>
+<p><strong>New waitlist form</strong>: <a href="https://docs.google.com/forms/d/18m6cb7MMsN9v3pmCCb7KTOPBI3EwmzT-ESH6vE4MaSo/preview">Waitlistform</a> Even if you filled out the old form, please fill out the new form; so we can keep track of folks who are still interested in the class. The TAs will also be posting it on EdStem.</p>
 <h2 id="auditing">Auditing</h2>
-<p>If you wish to audit (or “vagabond”) the class, note that the
-aforementioned limits on TA resources still apply, so we won’t be able
-to offer auditors grading support or support in office hours.</p>
+<p>If you wish to audit (or “vagabond”) the class, note that the aforementioned limits on TA resources still apply, so we won’t be able to offer auditors grading support or support in office hours.</p>
 <hr style="border: none; border-top: 1px solid lightgrey; margin: 20px 0;">
 <h1 id="coursestructure">Components and Grading</h1>
 <h2 id="course-projects-65">Course Projects: 65 %</h2>
-<p>The largest component of this class is a series of four course
-projects. Each project will involve an implementation task and writeup
-that answers conceptual questions. Course staff will grade projects
-based on the correctness and performance of the implementation, and
-clarity of the writeup. Projects may either be graded offline by course
-staff, or through live meetings with course staff. During these gradings
-meetings, students should be able to answer technical questions about
-the project. Projects in this course offering are in both Python (using
-Pytorch) and Cuda (to program GPUs). The breakdown of how much each
-project contributes to the final grade is below (percentages add to
-65).</p>
+<p>The largest component of this class is a series of four course projects. Each project will involve an implementation task and writeup that answers conceptual questions. Course staff will grade projects based on the correctness and performance of the implementation, and clarity of the writeup. Projects may either be graded offline by course staff, or through live meetings with course staff. During these gradings meetings, students should be able to answer technical questions about the project. Projects in this course offering are in both Python (using Pytorch) and Cuda (to program GPUs). The breakdown of how much each project contributes to the final grade is below (percentages add to 65).</p>
 <ul>
 <li>Project 1: 18 %</li>
 <li>Project 2: 18 %</li>
@@ -152,93 +96,29 @@ project contributes to the final grade is below (percentages add to
 <li>Project 4: 11 %</li>
 </ul>
 <h2 id="written-homeworks-20">Written Homeworks: 20 %</h2>
-<p>There will be two written homeworks, where students read pieces of
-technical writing (either a research paper or a tech report), and
-students must respond to conceptual questions. Responses will be graded
-on clarity. Late hours cannot be used on the written homeworks.</p>
+<p>There will be two written homeworks, where students read pieces of technical writing (either a research paper or a tech report), and students must respond to conceptual questions. Responses will be graded on clarity. Late hours cannot be used on the written homeworks.</p>
 <h2 id="post-lecture-quizzes-10">Post Lecture Quizzes: 10 %</h2>
-<p>After almost all the lectures, the teaching staff will post a short
-quiz that reinforces lecture content, which will be graded on
-completeness and correctness. If you have attended the lecture (or
-watched the lecture video posted to canvas), you should be able to
-answer the quiz questions. Students <em>cannot submit PLQ responses
-late</em>, but they can <em>miss up to 5 PLQs across the entire
-semester</em>, no questions asked. If there is a PLQ, it will be posted
-right after each lecture and the response is due at the start of the
-<em>next</em> lecture (responses will not be accepted after this).</p>
+<p>After almost all the lectures, the teaching staff will post a short quiz that reinforces lecture content, which will be graded on completeness and correctness. If you have attended the lecture (or watched the lecture video posted to canvas), you should be able to answer the quiz questions. Students <em>cannot submit PLQ responses late</em>, but they can <em>miss up to 5 PLQs across the entire semester</em>, no questions asked. If there is a PLQ, it will be posted right after each lecture and the response is due at the start of the <em>next</em> lecture (responses will not be accepted after this).</p>
 <h2 id="class-participation-5">Class Participation: 5 %</h2>
-<p>The final component of the grade is class participation. Students can
-participate in a number of ways: answering each other’s questions on
-EdStem, asking particularly helpful questions in EdStem, lecture, or
-office hours, and helping each other in office hours.</p>
-<h2 id="late-policy-for-course-projects">Late Policy (for Course
-Projects)</h2>
-<p>Each student has 144 total late hours for projects. These hours are
-designed to help you cope with unexpected emergencies, and only apply to
-project submissions. In other words, you can hand in your projects late,
-but the total amount of lateness summed over all the deadlines must not
-exceed 144 hours. For the purpose of calculating late hours, we exclude
-hours between midnight and 7am. This means that you can get a good
-night’s sleep before you continue working on your project without losing
-extra late hours while you sleep.</p>
-<p>If you don’t hand in a project by the last day of classes, we’ll give
-the assignment a zero (i.e., no credit whatsoever). However, if you hand
-an assignment in late, and your total late time (including the late time
-for that assignment) exceeds 144 hours, and you hand it in by the last
-day of classes, then we’ll give it a D or an F depending on whether it
-seems to basically work. Therefore, it’s better to complete and hand in
-a project even if you have already used your late hours.</p>
-<p>You can divide up your 144 hours among the projects however you like;
-you don’t have to ask or tell us, but you <em>cannot use more than 72
-hours per project</em>. Finally, can only use the 144 hours for the
-projects, and not for post-lecture quizzes or for the written homework.
-If you want an exception to these rules, you will need a Dean’s
-note.</p>
-<p>Finally, if you find yourself struggling, please contact the
-instructors as soon as you feel able; and if you have a health condition
-that affects your learning or classroom experience, please contact us so
-we can seek accommodations. We do not generally make exceptions to the
-late policy, but we work hard to help all our students complete the
-course without overwhelming stress.</p>
+<p>The final component of the grade is class participation. Students can participate in a number of ways: answering each other’s questions on EdStem, asking particularly helpful questions in EdStem, lecture, or office hours, and helping each other in office hours.</p>
+<h2 id="late-policy-for-course-projects">Late Policy (for Course Projects)</h2>
+<p>Each student has 144 total late hours for projects. These hours are designed to help you cope with unexpected emergencies, and only apply to project submissions. In other words, you can hand in your projects late, but the total amount of lateness summed over all the deadlines must not exceed 144 hours. For the purpose of calculating late hours, we exclude hours between midnight and 7am. This means that you can get a good night’s sleep before you continue working on your project without losing extra late hours while you sleep.</p>
+<p>If you don’t hand in a project by the last day of classes, we’ll give the assignment a zero (i.e., no credit whatsoever). However, if you hand an assignment in late, and your total late time (including the late time for that assignment) exceeds 144 hours, and you hand it in by the last day of classes, then we’ll give it a D or an F depending on whether it seems to basically work. Therefore, it’s better to complete and hand in a project even if you have already used your late hours.</p>
+<p>You can divide up your 144 hours among the projects however you like; you don’t have to ask or tell us, but you <em>cannot use more than 72 hours per project</em>. Finally, can only use the 144 hours for the projects, and not for post-lecture quizzes or for the written homework. If you want an exception to these rules, you will need a Dean’s note.</p>
+<p>Finally, if you find yourself struggling, please contact the instructors as soon as you feel able; and if you have a health condition that affects your learning or classroom experience, please contact us so we can seek accommodations. We do not generally make exceptions to the late policy, but we work hard to help all our students complete the course without overwhelming stress.</p>
 <h2 id="time-breakdown">Time Breakdown</h2>
-<p>Students should expect to spend 3 hours per week in lecture, and
-approximately 10 hours a week working on the course projects and/or
-written homeworks, for a total of 180 hours over the entire week.</p>
+<p>Students should expect to spend 3 hours per week in lecture, and approximately 10 hours a week working on the course projects and/or written homeworks, for a total of 180 hours over the entire week.</p>
 <hr style="border: none; border-top: 1px solid lightgrey; margin: 20px 0;">
 <h1 id="collaboration">Collaboration Policy</h1>
-<p>Students should understand and follow the <a
-href="https://college.brown.edu/design-your-education/academic-policies/academic-code">Brown
-Academic Code</a> and the <a
-href="https://www.brown.edu/offices/student-conduct/code">Code of
-Student Conduct</a>.</p>
-<p>Additionally, specific to this course, we <em>encourage working with
-other students to build conceptual understanding and debug software
-issues</em>. However, each student is responsible for their own project
-implementation and writeup, and their own written homework response.</p>
-<p>Students must understand their submissions; instructors will
-interview and quiz students about their answers as part of the grading
-process to determine this. For all class assignments, students must cite
-all sources (people, websites, papers, etc.) that they consult as a part
-of their work. External sources include but are not limited to
-previously published articles, blog posts, Stackoverflow or similar
-sites, conversations with other people, etc. This policy is not meant to
-discourage the use of external sources, but rather to codify a standard
-academic practice. Be generous with citations.</p>
-<p>A note about generative AI: students should not use generative AI to
-fill in code snippets for any of the course projects, or write answers
-to the conceptual questions or written assignments. Remember that
-instructors always reserve the right to ask students about their
-implementations and writeups, so it is important for students to have
-worked through the assignments.</p>
-<p>Finally, by taking this class, you agree to never post solutions for
-any assignments publicly.</p>
+<p>Students should understand and follow the <a href="https://college.brown.edu/design-your-education/academic-policies/academic-code">Brown Academic Code</a> and the <a href="https://www.brown.edu/offices/student-conduct/code">Code of Student Conduct</a>.</p>
+<p>Additionally, specific to this course, we <em>encourage working with other students to build conceptual understanding and debug software issues</em>. However, each student is responsible for their own project implementation and writeup, and their own written homework response.</p>
+<p>Students must understand their submissions; instructors will interview and quiz students about their answers as part of the grading process to determine this. For all class assignments, students must cite all sources (people, websites, papers, etc.) that they consult as a part of their work. External sources include but are not limited to previously published articles, blog posts, Stackoverflow or similar sites, conversations with other people, etc. This policy is not meant to discourage the use of external sources, but rather to codify a standard academic practice. Be generous with citations.</p>
+<p>A note about generative AI: students should not use generative AI to fill in code snippets for any of the course projects, or write answers to the conceptual questions or written assignments. Remember that instructors always reserve the right to ask students about their implementations and writeups, so it is important for students to have worked through the assignments.</p>
+<p>Finally, by taking this class, you agree to never post solutions for any assignments publicly.</p>
 <hr style="border: none; border-top: 1px solid lightgrey; margin: 20px 0;">
 <h1 id="schedule">Schedule</h1>
 <h2 id="homeworks-and-projects">Homeworks and Projects</h2>
-<p>Note that all dates are tentative and we may change the schedule as
-the course goes on. Homeworks and projects will be released latest by 5
-PM on the release date, and will be due at <em>6 PM on the due
-date</em>.</p>
+<p>Note that all dates are tentative and we may change the schedule as the course goes on. Homeworks and projects will be released latest by 5 PM on the release date, and will be due at <em>6 PM on the due date</em>.</p>
 <table>
 <colgroup>
 <col style="width: 15%" />
@@ -294,9 +174,7 @@ date</em>.</p>
 </tbody>
 </table>
 <h2 id="lectures-plqs-posted-here">Lectures (PLQs Posted Here)</h2>
-<p>Lecture recordings are available <a
-href="https://canvas.brown.edu/courses/1098542/external_tools/33943">here</a>
-(accessible to anyone at Brown).</p>
+<p>Lecture recordings are available <a href="https://canvas.brown.edu/courses/1098542/external_tools/33943">here</a> (accessible to anyone at Brown).</p>
 <table>
 <colgroup>
 <col style="width: 17%" />
@@ -329,36 +207,25 @@ href="https://canvas.brown.edu/courses/1098542/external_tools/33943">here</a>
 <td>01/28/2025</td>
 <td>Overview of DL Stack, Data Parallelism and All-Reduce</td>
 <td><a href="notes/Lecture3_130.pdf">Notes</a></td>
-<td><a
-href="https://docs.google.com/forms/d/1cGhS7vtbzAGyiaNbrEPulfNIVtqEPl_S8DWP2AI0u6g/preview">PLQ</a></td>
+<td><a href="https://docs.google.com/forms/d/1cGhS7vtbzAGyiaNbrEPulfNIVtqEPl_S8DWP2AI0u6g/preview">PLQ</a></td>
 </tr>
 <tr class="even">
 <td>02/04/2025</td>
 <td>ZeRO Redundancy, Tensor Model Parallelism, Pipeline Parallelism</td>
 <td><a href="notes/Lecture4_Feb4.pdf">Notes</a></td>
-<td><a
-href="https://docs.google.com/forms/d/1bKmYOOqABDrPTKhzZaAUh_FJI_YYLhdIYaE8L7dWras/preview">PLQ</a></td>
+<td><a href="https://docs.google.com/forms/d/1bKmYOOqABDrPTKhzZaAUh_FJI_YYLhdIYaE8L7dWras/preview">PLQ</a></td>
 </tr>
 <tr class="odd">
 <td>02/04/2025</td>
 <td>Attention, Transformers Overview</td>
 <td><a href="notes/Lecture5_Transformers.pdf">Notes</a></td>
-<td><a
-href="https://docs.google.com/forms/d/e/1FAIpQLScKF0kSojbUhz8cZ6Rt9QLSdC0R5n2Dyyk6UdPNrv83intKDQ/viewform?usp=preview">PLQ</a></td>
+<td><a href="https://docs.google.com/forms/d/e/1FAIpQLScKF0kSojbUhz8cZ6Rt9QLSdC0R5n2Dyyk6UdPNrv83intKDQ/viewform?usp=preview">PLQ</a></td>
 </tr>
 </tbody>
 </table>
 <hr style="border: none; border-top: 1px solid lightgrey; margin: 20px 0;">
 <h3 id="credits">Credits</h3>
-<p>Website designed using pandoc. The class content borrows heavily from
-<a href="https://cs229s.stanford.edu/fall2024/">cs229s</a> at Stanford
-University, created by Azalia Mirhoseini and Simran Arora, and <a
-href="https://www.cs.cmu.edu/~zhihaoj2/15-849/">cs 15-849</a>, taught by
-Zhihao Jia. We have also drawn on work from Simon Boehm, Deepak
-Narayanan, and cs149 at Stanford. We thank Brown T-Staff for managing
-the Hydra cluster, without which it would be difficult to complete
-projects 2 and 3. The collaboration policy is taken from cs1675 at
-Brown. The late hours policy is taken from Brown’s cs300.</p>
+<p>Website designed using pandoc. The class content borrows heavily from <a href="https://cs229s.stanford.edu/fall2024/">cs229s</a> at Stanford University, created by Azalia Mirhoseini and Simran Arora, and <a href="https://www.cs.cmu.edu/~zhihaoj2/15-849/">cs 15-849</a>, taught by Zhihao Jia. We have also drawn on work from Simon Boehm, Deepak Narayanan, and cs149 at Stanford. We thank Brown T-Staff for managing the Hydra cluster, without which it would be difficult to complete projects 2 and 3. The collaboration policy is taken from cs1675 at Brown. The late hours policy is taken from Brown’s cs300.</p>
 <style>
   table {
     border-collapse: collapse;
