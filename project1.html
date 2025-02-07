@@ -568,7 +568,7 @@ python3 plot.py throughput ddp=1,ddp=2,ddp=4 --output graphs/ddp_throughput_comp
 python3 train.py model --num_workers 3
 
 <span class="hljs-comment"># Plot the data</span>
-python3 plot.py timeline model=3 --output model_timeline.png
+python3 plot.py timeline model=3 --output graphs/model_timeline.png
 </code></pre>
       </div>
       
@@ -589,7 +589,7 @@ python3 train.py model --num_workers 2
 python3 train.py model --num_workers 3
 
 <span class="hljs-comment"># Plot the data</span>
-python3 plot.py throughput model=1,model=2,model=3 --output model_throughput_comparison.png
+python3 plot.py throughput model=1,model=2,model=3 --output graphs/model_throughput_comparison.png
 </code></pre>
       </div>
       
@@ -637,7 +637,7 @@ python3 train.py fsdp --num_workers 2
 python3 train.py fsdp --num_workers 4
 
 <span class="hljs-comment"># Plot the data</span>
-python3 plot.py throughput fsdp=1,fsdp=2,fsdp=4 --output fsdp_throughput_comparison.png
+python3 plot.py throughput fsdp=1,fsdp=2,fsdp=4 --output graphs/fsdp_throughput_comparison.png
 </code></pre>
       </div>
       
@@ -693,7 +693,7 @@ python3 plot.py throughput fsdp=1,fsdp=2,fsdp=4 --output fsdp_throughput_compari
 python3 train.py pipeline --num_workers 3
 
 <span class="hljs-comment"># Plot the data</span>
-python3 plot.py timeline pipeline=3 --output pipeline_timeline.png
+python3 plot.py timeline pipeline=3 --output graphs/pipeline_timeline.png
 </code></pre>
       </div>
       
@@ -714,7 +714,7 @@ python3 train.py --num_workers 2 pipeline
 python3 train.py --num_workers 3 pipeline
 
 <span class="hljs-comment"># Plot the data</span>
-python3 plot.py throughput pipeline=1,pipeline=2,pipeline=3 --output pipeline_throughput_comparison.png
+python3 plot.py throughput pipeline=1,pipeline=2,pipeline=3 --output graphs/pipeline_throughput_comparison.png
 </code></pre>
       </div>
       
