@@ -664,7 +664,7 @@ python3 plot.py throughput fsdp=1,fsdp=2,fsdp=4 --output graphs/fsdp_throughput_
 </ol>
 </div><div class="alert alert-info">
 <p><strong><span>Question 3.3</span></strong>
-<span>Now let's plug in some values. We are again using mixed-precision training, where models and gradients are stored in FP16, but the optimizer states are stored in FP32. Our model has 10 billion parameters. In bytes, what is the memory overhead per worker, when:</span></p>
+<span>Now let's plug in some values. We are again using mixed-precision training, where models and gradients are stored in FP16, but the optimizer states are stored in FP32. Our model has 10 billion parameters, and we split training across 8 workers. In bytes, what is the memory overhead per worker, when:</span></p>
 <ol style="padding-left: 2em;">
 <li><span>The optimizer is sharded?</span></li>
 <li><span>The optimizer and gradients are sharded?</span></li>
